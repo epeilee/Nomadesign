@@ -423,7 +423,7 @@ h3::after {
 }
 
 .contact .msg input {
-  order-radius: 0;
+  border-radius: 0;
   border: 1px solid #999999;
   background-color: #FAFAFA;
   height: 50px;
