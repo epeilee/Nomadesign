@@ -1,0 +1,756 @@
+@import "./common/variable.scss";
+
+body {
+    background-color: white;
+    font-size: 13px;
+}
+section {
+    border: none;
+    box-shadow: none;
+}
+h1, h2, h3, h4 {
+    font-weight: 500;
+    color: #333;
+}
+h1,h2,h3{
+	font-size: 17px;
+}
+a{
+	color: $ethan-thirdColor;
+    text-decoration: none;
+}
+a:focus, a:hover {
+    color: $ethan-secondColor;
+    text-decoration: none;
+}
+input[type=button], input[type=checkbox], input[type=file], input[type=image], input[type=radio], input[type=reset], input[type=submit] {
+    width: auto;
+    font-family: 'Lato', arial , sans-serif;
+}
+.portal-aha-header {
+    display: none;
+}
+/*2. Change the color of the Share Idea button. Use the custom CSS:*/
+.btn {
+    font-size: 13px;
+    border-radius: 2px;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:active {
+    border-color: #70b6d3;
+    background-color: #70b6d3;
+}
+.btn.btn-primary {
+    border-color: #00BCD3;
+    background-color: #00BCD3;
+    color: #fff;
+}
+.btn.btn-secondary {
+    color: #4788C8;
+    border: 1px solid #4788C8;
+}
+.btn:active {
+    transform: $btn-transform;
+}
+/*----hover----*/
+.btn:not(.quarterly-button):not(.annually-button):not(.btn-primary):not(.btn-success):not(.btn-info):not(.btn-danger):not(.btn-warning):not(.btn-inverse):not(.btn-twitter):not(.btn-getting-started):not(.btn-outline):not(.btn-plain):not(.btn-text):not(.btn-unstyled):not(.btn-orange):not(.btn-gray):not(.copy-button):not(.btn-link):hover,
+.filter-menu-trigger:hover,
+.selectro-trigger:hover {
+    border-color: #4788C8;
+    background-color: #E8F3F9;
+}
+/*----active----*/
+.btn:not(.quarterly-button):not(.annually-button):not(.btn-primary):not(.btn-success):not(.btn-info):not(.btn-danger):not(.btn-warning):not(.btn-inverse):not(.btn-twitter):not(.btn-getting-started):not(.btn-outline):not(.btn-plain):not(.btn-text):not(.btn-unstyled):not(.btn-orange):not(.btn-gray):not(.copy-button):not(.btn-link).active,
+.btn:not(.quarterly-button):not(.annually-button):not(.btn-primary):not(.btn-success):not(.btn-info):not(.btn-danger):not(.btn-warning):not(.btn-inverse):not(.btn-twitter):not(.btn-getting-started):not(.btn-outline):not(.btn-plain):not(.btn-text):not(.btn-unstyled):not(.btn-orange):not(.btn-gray):not(.copy-button):not(.btn-link):active,
+.filter-menu-trigger.active,
+.filter-menu-trigger:active,
+.selectro-trigger.active,
+.selectro-trigger:active {
+    border-color: #4788C8;
+    background-color: #E8F3F9;
+}
+.btn-outline {
+	font-weight: 500;
+    color: #999;
+    border: 2px solid #999;
+    font-weight: 500;
+    background-color: #fff;
+    text-shadow: none;
+}
+.idea{
+	.btn-outline.disabled, .btn-outline:disabled, .btn-outline[disabled]{
+		border-color: #4788C8!important;
+    	background-color: #E8F3F9!important;
+    	border: 0px solid!important;
+	}
+}
+
+/*3. Change the vote indication color on the portal. Use the custom CSS:*/
+
+.btn-vote.voted .vote-count {
+    color: #fff;
+}
+.btn-vote.voted .vote-status {
+    background-color: #70b6d3;
+}
+/*4. Change the idea list filter hover color on the portal. Use the custom CSS:*/
+
+/*5. Remove the vote tally on the portal. Use the custom CSS:*/
+
+.idea-content .nav-tabs>li:nth-child(2) {
+    display: none;
+}
+/*To change the color of the text, add custom CSS:*/
+
+/*-----start----*/
+.container{
+	width: 100%;
+	max-width: unset;
+	padding: 0px;
+	margin: 0 auto;
+	.idea{
+		width: 80%;
+		margin: 0 auto;
+	}
+	// >div{
+	// 	width: 80%;
+	// 	margin: 0 auto;
+	// 	float: initial;
+	// }
+}
+.portal-sidebar {
+    width: 100%;
+    float: left;
+    margin-right: 3%;
+    z-index: 1;
+    .btn {
+	    box-sizing: border-box;
+	    padding: 5px 10px;
+	    max-width: 160px;
+	    margin-top: 20px;
+	    margin-left: 20px; 
+	}
+	.btn:before{
+		content: "";
+  		background-image: url('https://portaldemo.essist.com.au/Review/Icons/icon-add.svg');
+  		background-size: 16px 16px;
+	    height: 16px;
+	    width: 16px; 
+	    background: #fff;
+	    padding-left: 16px;
+    	margin-right: 5px;
+	    background-repeat: no-repeat;
+	    mask: url('https://portaldemo.essist.com.au/Review/Icons/icon-add.svg') no-repeat 100% 100%;
+	}
+    #sidebar-rollup{
+    	width: 100%;
+    	display: inline-flex;
+    	align-items: flex-start;
+    	justify-content: center;
+    	background-color: $theme-mainColor;
+    	height: 30px;
+    	z-index: 5;
+    	>div{
+    		position: relative;
+    		z-index: 5;
+    		/*----layer 2----*/
+    		.filters{
+				display: none;
+				position: absolute;
+				width: 100%;
+				li{
+					padding: 0;
+					position: relative;
+					display: table;
+    				width: 100%;
+    				background-color: #84D2DB;
+    				a{
+    					
+    				}
+					/*----layer 3----*/
+					ul{
+						margin-left: 0px;
+						display: none;
+						width: 100%;
+						position: absolute;
+						top: 0;
+						margin-left: 100%;
+
+						li{
+							// background-color: #C3CDD9;
+							position: relative;
+							a{
+								padding-left: 30px;
+								background-color: #dbedfb;
+								&:hover{
+									background-color: $ethan-mainColor;
+								}
+							}
+							/*----layer 4----*/
+							ul{
+								position: absolute;
+								display: none;
+								top: 0;
+								right: 100%;
+								margin-left: 100%;
+								li{
+									// background-color: #dddfe2;
+									a{
+										padding-left: 30px;
+										background-color: #dddfe2;
+										&:hover{
+											background-color: $ethan-mainColor;
+										}
+									}
+								}
+							}
+						}
+					}
+					/*----layer 3 hover show layer 4----*/
+					&:hover{
+						>ul{
+							display: block;
+						}
+					}
+				}
+				/*----layer 2 hover show layer 3----*/
+				&:hover{
+					>ul{
+						display: block;
+					}
+				}
+			}
+    	}
+    	/*----layer 2----*/
+    	>div:hover{
+    		.filters{
+				display: block;
+    		}
+    	}
+    	div:nth-last-child(2){
+    		h4{
+    			border-right: 0px solid #fff;
+    		}
+    	}
+    	h4{
+    		padding: 5px 40px;
+    		background-color: $theme-mainColor;
+    		cursor:pointer;
+    		font-size: 13px;
+    		color: #fff;
+    		border-right: 1px solid #fff;
+    		font-weight: 900;
+    		-webkit-transition: all 0.20s ease-in-out;
+	           -moz-transition: all 0.20s ease-in-out;
+	            -ms-transition: all 0.20s ease-in-out;
+	             -o-transition: all 0.20s ease-in-out;
+    		&:hover{
+    			background-color: #01A3B6;
+    			color: #fff;
+    		}
+    		&:active,&:focus{
+    			background-color: #01A3B6;
+    		}
+    	}
+    	.current-user-info{
+    		display: none;
+    	}
+    	.my-ideas-filters-wrapper{
+			height: 30px;
+    		line-height: 30px;
+    		ul{
+    			.filter{
+					padding: 0px 15px;
+					border-right: 1px solid #fff;
+				}
+			}
+    	}
+    	.my-ideas-filters-wrapper:hover{
+    		&:before{
+    			background-color: #01A3B6;
+	    		color: #fff;
+	    	}
+    	}
+    	.my-ideas-filters-wrapper:before{
+    		content: "MY IDEAS";
+		    height: 30px;
+		    min-height: 30px;
+		    line-height: 30px;
+		    padding: 0px 40px;
+		    background-color: #00BCD3;
+		    cursor: pointer;
+		    font-size: 13px;
+		    color: #fff;
+		    border-right: 1px solid #fff;
+		    -webkit-transition: all 0.20s ease-in-out;
+		    -moz-transition: all 0.20s ease-in-out;
+		    -ms-transition: all 0.20s ease-in-out;
+		    -o-transition: all 0.20s ease-in-out;
+		    display: table;
+    		&:hover{
+    			background-color: #01A3B6;
+    			color: #fff;
+    		}
+    		&:active,&:focus{
+    			background-color: #01A3B6;
+    		}
+    	}
+    }
+}
+
+.filters {
+	-webkit-transition: all 0.20s ease-in-out;
+   	   -moz-transition: all 0.20s ease-in-out;
+        -ms-transition: all 0.20s ease-in-out;
+         -o-transition: all 0.20s ease-in-out;
+	/*----layer 3----*/
+	.filter {
+		padding-left: 30px;
+		height: 30px;
+		line-height: 30px;
+		margin-bottom: 0px;
+	    color: #666;
+	    padding: 0px 15px;
+	    border-radius: 0px;
+	    background-color: #c1f3f9;
+	    border-bottom: 1px solid #fff;
+		-webkit-transition: all 0.20s ease-in-out;
+           -moz-transition: all 0.20s ease-in-out;
+            -ms-transition: all 0.20s ease-in-out;
+             -o-transition: all 0.20s ease-in-out;
+	    span{
+	    	color: #666;
+	    }
+	    &:hover{
+			background-color: $ethan-mainColor;
+			color: #fff;
+			cursor: pointer;
+			span{
+				color: #fff;
+			}
+			i{
+				transform:rotate(-90deg);
+			}
+		}
+		&.active,&:active{
+			background-color: $ethan-mainColor!important;
+			color: #fff;
+			span{
+				color: #fff;
+			}
+		}
+		.close{
+			display: none;
+		}
+	}
+	
+}
+
+.portal-content,.idea-content{
+	z-index: 0;
+	width: 80%;
+	margin: 0 auto;
+	float: initial;
+	.portal-nav{
+		padding-top: 20px;
+		width: 100%;
+		display: inline-flex;
+		justify-content: space-around;
+		flex-direction: row;
+		box-sizing: border-box;
+	}
+
+	.nav-tabs{
+		border-bottom: 0px solid #ddd;
+		li{
+			a{
+				border-radius: $border-radius;
+	            background-color: $tab-backgroundColor;
+	            color: #666;
+	            outline: none;
+	            cursor: pointer;
+	            padding: 4px 30px;
+	            font-weight: normal;
+	            border-left: 1px solid #ffffff;
+	            -webkit-transition: all 0.20s ease-in-out;
+	            -moz-transition: all 0.20s ease-in-out;
+	            -ms-transition: all 0.20s ease-in-out;
+	            -o-transition: all 0.20s ease-in-out;
+	            outline: none;
+	            border: 0px solid #ddd;
+	            margin-right: 1px;
+	            &:hover,&.active,&:active{
+	            	border: 0px solid #ddd;
+	            	color: #fff;
+	            	cursor: pointer;
+	            }
+	            &:hover {
+	                background-color: $tab-backgroundColor-active;
+	            }
+	            &.active {
+	                background-color: $tab-backgroundColor-active;
+	                // box-shadow: $btn-boxShadow-active;
+	            }
+	            &:active {
+	                background-color: $tab-backgroundColor-active;
+	                // box-shadow: $btn-boxShadow-active;
+	                transform: $btn-transform;
+	            }
+			}
+			&.active {
+				cursor: pointer;
+				a{
+					background-color: $tab-backgroundColor-active;
+	                // box-shadow: $btn-boxShadow-active;
+	                border: 0px solid #ddd;
+	            	color: #fff;
+				}  
+	        }
+		}
+	}
+	.pagination{
+		ul{
+			box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
+			li{
+				a{
+					border: 0px solid #ddd;
+					color: #666666;
+				    padding: 0;
+				    border-radius: 25px;
+				    width: 30px;
+            		height: 30px;
+				    text-decoration: none;
+				    margin: 0 3px;
+				    display: -webkit-inline-box;
+				    display: -ms-inline-flexbox;
+				    display: inline-flex;
+				    -webkit-box-align: center;
+				    -ms-flex-align: center;
+				    align-items: center;
+				    -webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				    justify-content: center;
+				    -webkit-transition: all 0.20s ease-in-out;
+				    cursor: pointer;
+				}
+				a:active{
+		            background-color: $theme-mainColor;
+		            color: white;
+		            border-radius: 50px;
+		            cursor: default; 
+		        }
+		        a:hover:not(.active) {
+		            background-color: #d8d8d8;
+		            border-radius: 50px;
+		            color: #333;
+		        }
+
+		        a.disabled{
+		            color: $grid-iconColor-disabled;
+		            background-color: transparent;
+		            &:hover{
+		                background-color: transparent;
+		                cursor: inherit;
+		                color: $grid-iconColor-disabled;
+		            }
+		        }
+		        &.active{
+		        	cursor: pointer;
+		        	a{
+		        		background-color: $theme-mainColor;
+		        		color: white;
+		        	}
+		        }
+			}
+			li:first-child{
+				>a{
+					border-left-width: 0px;
+				}
+			}
+			
+			a.rotate{
+				// color: #333;
+				// cursor: pointer;
+				// display: flex;
+				// align-items:center;
+				// justify-content:center;
+	   //          width: 30px;
+	   //          min-width: 30px;
+	   //          height: 30px;
+		  //       border-radius: 25px;
+		  //       background-color: #fff;	
+		        transform:rotate(-90deg);
+			}
+		}
+	}
+}
+
+.ideas {
+	width: 100%;
+	.idea {
+		width: 100%;
+		display: inline-flex;
+		.idea-details {
+		    float: left;
+		    width: 100%;
+		    margin-bottom: 10px;
+		    padding-left: 10px;
+		    .idea-meta{
+		    	font-size: 12px;
+		    	color: #666;
+		    	.idea-meta-created{
+		    		color: #999;
+		    	}
+		    }
+		}
+		a{
+			display: table;
+		}
+		a:visited,a:visited h3 {
+		    color: #777;
+		}
+	}
+}
+.idea-endorsement {
+    display: flex;
+    width: 10%;
+    min-width: 60px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.btn-vote{
+	display: table;
+}
+.btn-vote.voted {
+    border-color: $ethan-mainColor;
+}
+.btn-vote.voted:not(.merged):focus, .btn-vote.voted:not(.merged):hover {
+    background-color: #E8F4F9;
+}
+.btn-vote.voted .vote-count{
+	color: #00A9BF;
+}
+.idea-link{
+	width: 95%;
+}
+.portal-nav .nav-tabs+.search-form{
+	border-bottom: 0px solid #ddd;
+}
+.portal-nav .search-form{
+	width: 20%;
+}
+
+
+/*-------idea--------*/
+.portal-nav {
+    padding-top: 20px;
+    width: 100%;
+}
+.ideas-portal{
+	.idea{
+		.portal-nav,.idea-content{
+			margin: 0 auto;
+		}
+		.idea-sidebar,.idea-content,.right-sidebar{
+			padding-top: 20px;
+		}
+		.idea-sidebar{
+			padding-left: 20px;
+		}
+	}
+}
+.idea-content {
+    float: left;
+    width: 68%;
+    padding: 20px 2%;
+}
+.right-sidebar {
+    float: right;
+    width: 20%;
+    padding-left: 0px;
+    padding-top: 20px;
+}
+.idea-categories, .related-ideas {
+    padding-top: 20px;
+}
+.idea-sidebar {
+    width: 8%;
+    min-width: 60px;
+    box-sizing: border-box;
+}
+.breadcrumb{
+	padding-left: 20px;
+	box-sizing: border-box;
+	a{
+		color: $color-breadcrumb-click;
+	}
+	>li>.divider {
+	    padding: 0 5px;
+	    color: $color-breadcrumb-click;
+	}
+	.active{
+		color: $color-breadcrumb-active;
+	}
+}
+.sidebar-section {
+    display: none;
+}
+.sidebar-header {
+    font-weight: normal;
+    color: #333;
+}
+/*-----add new idea-----*/
+.portal-sidebar{
+	.breadcrumb{
+		width: 80%;
+    	margin: 0 auto;
+    	padding-top: 20px;
+    	padding-left: 20px;
+	}
+}
+.current-user-info{
+	display: none;
+}
+.alert-success{
+	background-color: #E8F3F9;
+    border-color: #add2c9;
+    color: $ethan-thirdColor;
+    h4 {
+	    color: $ethan-secondColor;
+	}
+}
+.attachment-button {
+    padding: 10px 0;
+    font-size: 13px;
+    color: #4788C8;
+    &:hover,&:active{
+		color: #256196;
+    }
+}
+.fa-paperclip:before {
+    font-size: 18px;
+}
+
+
+@media all and (min-width: 1221px) and (max-width: 1521px){ 
+	.idea-content {
+	    width: 65%;
+	}
+}
+@media all and (max-width: 1470px) and (min-width: 1221px){
+	.container{
+		.idea{
+			.portal-nav{
+				.breadcrumb{
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+}
+@media all and (min-width: 961px) and (max-width: 1220px) {
+	.idea-content {
+	    width: 63%;
+    	padding: 20px 2%;
+	}
+}
+@media all and (min-width: 671px) and (max-width: 960px){
+	.private .idea-sidebar, .public .idea-sidebar, .submit-only .idea-sidebar {
+	    width: 8%;
+	}
+	.private .idea-content, .public .idea-content, .submit-only .idea-content {
+    	width: 57%;
+    }
+    .container{
+		.idea{
+			.portal-nav{
+				.breadcrumb{
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	.idea-content {
+	    padding: 20px 4%;
+	}
+}
+@media all and (max-width:844px) {
+	.portal-content .portal-nav, .idea-content .portal-nav {
+	    justify-content: space-between;
+	    flex-direction: column-reverse;
+	}
+	.portal-nav .search-form {
+	    width: 50%;
+	}
+}
+@media only screen and (min-width: 768px){
+	.portal-nav .search-form {
+	    margin-bottom: 20px;
+	}
+	// .breadcrumb {
+	//     padding-left: 20px;
+	// }
+	// .container{
+	// 	.idea{
+	// 		.portal-nav{
+	// 			.breadcrumb{
+	// 				padding-left: 0;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+@media all and (max-width: 670px){
+	.private .btn.btn-navbar, .public .btn.btn-navbar, .submit-only .btn.btn-navbar{
+		display: none;
+	}
+	.private .portal-content, .public .portal-content, .submit-only .portal-content {
+	    padding: 0 20px;
+	}
+	.portal-sidebar #sidebar-rollup .my-ideas-filters-wrapper:before{
+		padding: 0px 10%;
+	}
+	.portal-sidebar #sidebar-rollup h4{
+		padding: 5px 5%;
+	}
+	.container{
+		.idea{
+			.portal-nav{
+				.breadcrumb{
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	.idea-content {
+	    padding: 20px 4%;
+	    box-sizing: border-box;
+	}
+}
+/*@media all and (min-width: 320px) and (max-width: 1022px)*/
+@media all and (min-width: $phone-xs-media) and (max-width: $pcs-media){
+	.portal-content {
+	    width: auto;
+    	padding: 0 20px;
+	}
+	.container .idea {
+	    width: 100%;
+	    padding: 0px;
+	}
+	.idea-sidebar {
+	    width: 8%;
+	}
+	.container .ideas .idea{
+		padding: 10px 0px;
+	}
+	.portal-sidebar{
+		.breadcrumb{
+			width: 100%;
+		}
+	}
+	.ideas-portal .idea .portal-nav{
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+}
+

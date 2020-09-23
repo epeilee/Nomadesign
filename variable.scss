@@ -1,0 +1,206 @@
+$theme-mainColor: #00BCD3;
+$theme-mainColorHover: #01A3B6;
+$theme-H1Color: #333333;
+$ethan-mainColor:#6FB6D3;
+$ethan-secondColor:#256196;
+$ethan-thirdColor:#4788C8;
+
+$backgroundColor-header: #FFFFFF;
+$backgroundColor-control: #FFFFFF;
+$backgroundColor-filter: #FFFFFF;
+$backgroundColor-result: #F3F6F9;
+$backgroundColor-grid: #FFFFFF;
+$backgroundColor-summary:#FAFAFA;
+
+$grid-backgroundColor-header: #00BCD3;
+$grid-backgroundColor-odd: #FFFFFF;
+$grid-backgroundColor-even: #F2F2F2;
+$grid-backgroundColor-hover: #E8F4F9;
+$grid-backgroundColor-active: #E8F4F9;
+$grid-borderColor: #d8d8d8;
+$grid-borderColor-hover: #13A2CA;
+$grid-borderColor-active: #13A2CA;
+$grid-transform: translate(0,1px);
+$grid-boxShadow: 0px 2px 5px rgba(0,0,0,0.2);
+
+$grid-lineColor: #d8d8d8;
+
+// $color-link:#4A90E2;
+$color-menuSubGroup:#023C61;
+$color-menuGroup:#08466e;
+$color-page:#002c49;
+$color-menu-active:#13A2CA;
+
+$color-breadcrumb-click:#1F507D;
+$color-breadcrumb-active:#333;
+
+$detail-header-backgroundColor: #00A9BF;
+$detail-borderBottomColor:#eeeeee;
+
+$toolbar-iconColor: #6483A7;
+$toolbar-iconColor-hover: #108EE9;
+$toolbar-iconColor-active: #108EE9;
+$toolbar-iconColor-inactive: #d8d8d8;
+$toolbar-iconColor-gery: #c9c9c9;
+$grid-iconColor: #6483A7;
+$grid-iconColor-hover: #108EE9;
+$grid-iconColor-disabled: #B8B8B8;
+
+$tab-backgroundColor: #eeeeee;
+$tab-backgroundColor-hover: #0bb9d0;
+$tab-backgroundColor-active: #00A9BF;
+$tab-fontColor: #333333;
+$tab-fontColor-hover: #FFFFFF;
+$tab-borderColor: #999999;
+$borderColor: #C3CDD9;
+
+$btn-inactive: #C3CDD9;
+$btn-hover: #6FB6D3;
+$btn-active: #6FB6D3;
+
+$font-mainColor: #666666;
+$font-titleColor: #333333;
+$font-whiteColor: #ffffff;
+
+$font-normalColor: #2D6EBA;
+$font-hoverColor: #108EE9;
+$font-activeColor: #108EE9;
+
+$font-defaultSize: 13px;
+$font-smallerSize: 12px;
+$font-H1Size: 20px;
+$font-H2Size: 17px;
+$font-H3Size: 15px;
+$font-H4Size: 14px;
+$font-lineHeight: 1.7;
+$font-H1Size-M: 15px;
+$font-H2Size-M: 15px;
+$font-H3Size-M: 15px;
+
+// ======== color setting =========//
+$color-main:#13A2CA;
+$color-titleNavy:#3C899F;
+$color-darkGray:#666;
+$color-midGray:#9b9b9b;
+$color-bordergray:#d7d7d7;
+$color-green:#7ED321;
+$color-red:#DE7272;
+$color-unhighlight:#C3CDD9;
+$color-link:#4A90E2;
+$color-menuSubGroup:#08466E;
+$color-menuGroup:#023C61;
+
+// ======== font-size setting =========//
+$font-XL:20px;
+$font-L:17px;
+$font-M:15px;
+$font-S:13px;
+$font-XS:12px;
+
+// ======== z-index setting-default =========//
+$zindex-header: 50 !default;
+
+$zindex-nav: 60 !default;
+$zindex-ethanNav: 70 !default;
+$zindex-groupNav: 80;
+$zindex-subgroupNav-li: 50;
+$zindex-Nav-li-hover: 200;
+
+$zindex-container: 0 !default;
+$zindex-containerTitle: 500 !default;
+$zindex-control: 100 !default;
+
+$zindex-grid-details:0;
+$zindex-grid-row-hover: 50;
+$zindex-grid-header-hover: 100;
+$zindex-grid-body-span: 10;
+
+$zindex-tooltip: 700 !default;
+// ======== z-index setting-pad =========//
+$zindex-header-pad: 100 !default;
+$zindex-nav-pad: 500 !default;
+
+// ======== z-index setting-mobile =========//
+$zindex-header-Mobile: 100 !default;
+$zindex-container-Mobile: 50 !default;
+$zindex-title-Mobile: 200 !default;
+$zindex-ethanHeader-Mobile: 100;
+$zindex-ethanNav-Mobile: 200;
+$zindex-burger-Mobile: 500;
+$zindex-ethanNav-Mobile: 60;
+$zindex-toolbar-Mobile: 100;
+$zindex-control-Mobile:50;
+$zindex-mobileFilter-Mobile: 100 !default;
+// ======== z-index setting-end =========//
+$zindex-overlay:800;
+$zindex-popup:900;
+// ======== spend color setting =========//
+$spend-color01: #4978DE;
+$spend-color02: #38ABF0;
+$spend-color03: #2BCCB4;
+$spend-color04: #22C2F2;
+$spend-color05: #71E7F5;
+$spend-color06: #7BD3E9;
+$spend-color07: #A7F9ED;
+$spend-color08: #49DBC6;
+$spend-color09: #518FD9;
+$spend-color10: #70B9E7;
+$spend-color11: #83E1A4;
+$spend-color12: #0199D8;
+$activeBar-color: #E0F5FE;	
+
+// ======== ticket color setting =========//
+$ticket-color01: #6FB6D3;
+$ticket-color02: #0ABF94;
+$ticket-color03: #FAA53A;
+$ticket-color04: #0199D8;
+$ticket-color05: #0E907D;
+$ticket-color06: #EDD415;
+
+
+
+$border-width: 1px;
+$border-radius: 2px;
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+$btn-boxShadow-normal: 0 2px 4px 0 rgba(0,0,0,0.2);
+$btn-boxShadow-hover: 1px 1px 5px rgba(0,0,0,0.2);
+$btn-boxShadow-active: inset 1px 1px 5px rgba(0,0,0,0.2);
+$btn-transform: translate(0,1px);
+
+$pc-lg-media:1280px; /*====1280px;====*/
+$pc-media:1023px; /*====1023px;====*/
+$pcs-media:1022px; /*====1022px;====*/
+$pad-media:767px;  /*====767px;====*/ 
+$pads-media:768px;  /*====768px;====*/
+$pad-l-media: 576px;
+$pads-l-media: 575px;
+$phone-media:442px;
+$phones-media:441px;
+$phone-xs-media:320px;
+
+
+@mixin wh($w:auto,
+$h:auto) {
+    width: $w;
+    height: $h;
+}
+
+@mixin font($fontSize,
+$lineHeight:1,
+$fontColor:transparent) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $fontColor;
+}
+
+// ======== width setting =========
+$nav-width:100%;
+$herder-height:60px;
+
+
