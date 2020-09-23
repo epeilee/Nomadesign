@@ -1,3 +1,14 @@
+@font-face {
+  font-family: orpheus-pro;
+  src: url(../fonts/Orpheus-Regular.ttf);
+}
+
+@font-face {
+  font-family: orpheus-pro;
+  src: url(../fonts/OrpheusPro-Bold.ttf);
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +17,7 @@
 }
 
 body, html {
-  font-family: 'Orpheus Pro', Helvetica, sans-serif;
+  font-family: "orpheus-pro", "Lato", "Noto Sans TC", serif, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;

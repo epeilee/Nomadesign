@@ -1,34 +1,28 @@
 @import"variable";
+@font-face {
+    font-family: orpheus-pro;
+    src: url(../fonts/Orpheus-Regular.ttf);
+}
+@font-face {
+    font-family: orpheus-pro;
+    src: url(../fonts/OrpheusPro-Bold.ttf);
+    font-weight: bold;
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body, html{
-    font-family: "Orpheus Pro", "Lato", "Noto Sans TC", , serif, sans-serif ;
+    font-family: "orpheus-pro", "Lato", "Noto Sans TC", serif, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: $font-lineHeight;
     width: 100%;
 }
-// @font-face {
-//     font-family: MyCustomFont;
-//     unicode-range: U+0-10FFFF; /* ASCII */
-//     src: local(Helvetica), local(Arial); /* 先找 Helvetica ，沒有的話用 Arial */
-// }
-@font-face {
-    font-family: orpheus-pro;
-    src: url(https://use.typekit.net/af/07139b/000000000000000000016ea5/27/l?subset_id=2&fvd=n4&v=3)
-        format("woff2"),
-        url(https://use.typekit.net/af/07139b/000000000000000000016ea5/27/d?subset_id=2&fvd=n4&v=3)
-        format("woff"),
-        url(https://use.typekit.net/af/07139b/000000000000000000016ea5/27/a?subset_id=2&fvd=n4&v=3)
-        format("opentype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: auto;
-  }
+
 h1{
     font-size: $font-H1Size;
     color: $font-headerColor;
