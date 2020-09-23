@@ -182,5 +182,19 @@
     text-align: center;
     padding-right: 0;
   }
+  .toolbox .cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .toolbox .card {
+    min-width: 45%;
+    padding: 50px 2% 50px 2%;
+  }
+  .toolbox .tools {
+    padding: 0px 0px;
+  }
+  .works .duty, .works .companyName, .works .position, .works .workyear {
+    padding: 5px 0;
+  }
 }
 /*# sourceMappingURL=me.css.map */

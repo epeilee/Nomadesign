@@ -147,6 +147,21 @@
             }
         }
     } 
-   
-
+    .toolbox{
+        .cards{
+            justify-content: space-around;
+        }
+        .card{
+            min-width: 45%;
+            padding: 50px 2% 50px 2%;
+        }
+        .tools {
+            padding: 0px 0px;
+        } 
+    }
+    .works{
+        .duty, .companyName, .position, .workyear{
+            padding: 5px 0;
+        }
+    }
 }
