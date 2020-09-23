@@ -1,0 +1,152 @@
+@import"variable";
+
+.hero{
+    .en{
+        // padding-top: 40px;
+        color: #666666;
+    }
+    .ch{
+        color: #666666;
+        font-size: 20px;
+        padding-top: 40px;
+        line-height: 2.4;
+    }
+}
+.works{
+    display: flex;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    .work{
+        text-align: right;
+    }
+    .company{
+        text-align: left;
+
+    }
+    .position{
+        color: $font-pColor;
+    }
+    .duty, .companyName, .position, .workyear{
+        padding: 10px 5%;
+    }
+    .workyear{
+        min-width: 238px;
+    }
+    
+}
+.myexperience, .skills, .contact{
+    background-color: #fafafa;
+}
+.toolbox{
+    .tools{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 10%;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .card{
+        min-width: 220px;
+        display: flex;
+        justify-content: center;
+        padding: 60px 2% 60px 2%;
+        margin: 20px 1%;
+        border-radius: 0;
+        border: 0px;
+        // box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1) ;
+        box-shadow: -4px -4px 20px 0px rgba(255,255,255,1), 4px 4px 25px 0 rgba(0,0,0,.1);
+    }
+    img{
+        width: 50%;
+        align-self: center;
+        padding-bottom: 20px;
+    }
+}
+.skills{
+    ul{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 25%;
+        justify-content: center;
+        div{
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    li{
+        display: flex;
+        width: 50%;
+        padding-bottom: 10px;
+        min-width: 190px;
+    }
+    li::before{
+        content: "\2022";
+        width: 5px;
+        // border-radius: 50%;
+        color:$mainColor;
+        padding-right: 20px;
+    }
+}
+.education{
+    ul{
+        width: 100%;
+    }
+    li{
+        width: 60%;
+        display: inline-flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        p{
+            padding-right: 3%;
+            min-width: 187px;
+            text-align: left;
+        }
+        .school::after{
+            content: '畢業';
+            position: relative;
+            left: 20px;
+        }
+    }
+
+}
+@media (max-width: 989px){
+    .works .work {
+        text-align: left;
+    }
+    .skills{
+        ul{
+            padding-left: 10%;
+            div {
+                width: 100%;
+        
+            }
+        }
+    }  
+}
+@media (max-width: 575px)  {
+    .hero{
+        .ch {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+    } 
+    .education{
+        li{
+            justify-content: center;
+            p{
+                text-align: center;
+                padding-right: 0;
+            }
+        }
+    } 
+   
+
+}

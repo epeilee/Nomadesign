@@ -1,0 +1,186 @@
+@charset "UTF-8";
+.hero .en {
+  color: #666666;
+}
+
+.hero .ch {
+  color: #666666;
+  font-size: 20px;
+  padding-top: 40px;
+  line-height: 2.4;
+}
+
+.works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works .work {
+  text-align: right;
+}
+
+.works .company {
+  text-align: left;
+}
+
+.works .position {
+  color: #666666;
+}
+
+.works .duty, .works .companyName, .works .position, .works .workyear {
+  padding: 10px 5%;
+}
+
+.works .workyear {
+  min-width: 238px;
+}
+
+.myexperience, .skills, .contact {
+  background-color: #fafafa;
+}
+
+.toolbox .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 10%;
+}
+
+.toolbox .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.toolbox .card {
+  min-width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 2% 60px 2%;
+  margin: 20px 1%;
+  border-radius: 0;
+  border: 0px;
+  -webkit-box-shadow: -4px -4px 20px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: -4px -4px 20px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.toolbox img {
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 20px;
+}
+
+.skills ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skills ul div {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  padding-bottom: 10px;
+  min-width: 190px;
+}
+
+.skills li::before {
+  content: "\2022";
+  width: 5px;
+  color: #333333;
+  padding-right: 20px;
+}
+
+.education ul {
+  width: 100%;
+}
+
+.education li {
+  width: 60%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.education li p {
+  padding-right: 3%;
+  min-width: 187px;
+  text-align: left;
+}
+
+.education li .school::after {
+  content: '畢業';
+  position: relative;
+  left: 20px;
+}
+
+@media (max-width: 989px) {
+  .works .work {
+    text-align: left;
+  }
+  .skills ul {
+    padding-left: 10%;
+  }
+  .skills ul div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero .ch {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  .education li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .education li p {
+    text-align: center;
+    padding-right: 0;
+  }
+}
+/*# sourceMappingURL=me.css.map */
