@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/resum.scss",
+        "../sass/_variable.scss"
+    ],
+    "names": [],
+    "file": "resum.css"
+}

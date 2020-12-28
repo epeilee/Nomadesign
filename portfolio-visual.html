@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio-Visual</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="favicon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/tabs.js" defer></script>
+    
+</head>
+
+<body>
+    <header>
+        <div w3-include-html="myheader" class="nav m-auto"></div>
+    </header>
+    <ul class="projectTabs">
+        <li data-tab-target="#UI" class="tab"><a href="portfolio-fluapp">UI</a></li>
+        <li data-tab-target="#Web" class="tab"><a href="portfolio-web">Web</a></li>
+        <li data-tab-target="#Graphic" class="active tab"><a href="portfolio-visual">Visual</a></li>
+    </ul>
+    <div class="container tabContainer">
+        <div id="Graphic" data-tab-content class="uiContainer visual active">
+            <div class="uiHeader">
+                <h3>Poster</h3>
+                <div class="">
+                    <a href="portfolio-web" class="pre" >Previous Project</a> 
+                    <a href="portfolio-logo" class="next" >Next Project</a>
+                </div>
+            </div>
+            <div class="Content">
+                <div class="container even">
+                    <div class="tsHero">
+                        <li>
+                            <p><strong>設計風格</strong></p>
+                            <div>
+                                <p>2013 澳門F1賽車 Lotus系列製作物<br>
+                                    Lotus文宣海報及名片，贈品，服裝
+                                </p>
+                            </div>
+                        </li>
+                    </div>
+                    <h3>Lotus</h3>
+                    <!-- Swiper -->
+                    <div class="swiper-container swiperPage1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide h600"><img class="h600 wAuto" src="/img/visual/poster.png" alt=""></div>
+                            <div class="swiper-slide h600"><img class="h600 wAuto" src="/img/visual/poster2.png" alt=""></div>
+                            <div class="swiper-slide h600"><img class="h600 wAuto" src="/img/visual/poster3.png" alt=""></div>
+                            <div class="swiper-slide wAuto"><img class="hAuto" src="/img/visual/lotus-card.png" alt=""></div>
+                            <div class="swiper-slide wAuto h600"><img class="w60 hAuto" src="/img/visual/lotus-polo shirt2.png" alt=""></div>
+                            <div class="swiper-slide wAuto"><img class="hAuto" src="/img/visual/lotus-umberella.png" alt=""></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div id="parkour" class="container">
+                    <div class="tsHero right">
+                        <li>
+                            <p><strong>設計風格</strong></p>
+                            <div>
+                                <p>酷跑宣傳招生海報，強調挑戰冒險衝刺，吸引更多年輕新血參與這項運動。
+                                </p>
+                            </div>
+                        </li>
+                    </div>
+                    <h3>Parkour</h3>
+                    <div class="details">
+                        <!-- Swiper -->
+                        <div class="swiper-container swiperPage1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide h600"><img class="h600 wAuto" src="/img/visual/Merchants-final-ol.png" alt=""></div>
+                                <div class="swiper-slide h600"><img class="h600 wAuto" src="/img/visual/Recruit students-final-ol.png" alt=""></div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*<!-- Initialize Swiper 01-->*/
+        var swiper = new Swiper('.swiper-container.swiperPage1', {
+            slidesPerView: 2,
+            centeredSlides: true,
+            spaceBetween: 0,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+        </script>
+
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -47,26 +47,89 @@ p{
     font-weight: 300;
     line-height: 2;
 }
+b, strong {
+    font-weight: bolder;
+}
 .container{
     max-width: 100%;
     margin: 0 auto;
     padding-bottom: 100px;
     padding-top: 60px;
     background-color: #fff;
+    padding-right: 0;
+    padding-left: 0;
 }
 .row{
     max-width: 1200px;
     margin: 0 auto;
 }
 header, footer{
-    padding-top: 10px;
     width: 100%;
 }
+header{
+    // position: sticky;
+      /* negative top allows for 16 pixels of movement before sticking */
+    top: -24px; 
+    height: 88px;
+    z-index: 5;
+    // box-shadow: -4px -4px 20px 0px rgba(255,255,255,1), 4px 4px 25px 0 rgba(0,0,0,.1);
+}
+/* PSEUDO ELEMENTS to create drop-shadow */
+header::before,
+header::after {
+  content: '';
+  display: block;
+  height: 24px;
+  /* make pseudo elements sticky as well */
+//   position: sticky;
+//   -webkit-position: sticky;
+}
+
+/* SHADOW */
+header::before {
+    top: 64px; /* shadow is at bottom of element, so at 48 + 16 = 64px */
+//   box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 4px 4px 40px 0 rgba(0,0,0,.2);
+}
+
+/* COVER */
+header::after {
+    /* linear gradient from background color to transparent acts as
+     a transition effect so the shadow appears gradually */
+     background: linear-gradient(180deg, #fff, #fafafa 20%, #f1f2f3 20%,#f1f2f3 5%, transparent);
+    // background: linear-gradient(white 1%, rgba(255,255,255,0.8) 10%, rgba(0,0,0,.2) 10%, transparent);
+    position: relative;
+    top: -10px;
+    /* cover should fall over shadow */
+    z-index: 4;
+    // position: absolute;
+}
+/* HEADER CONTENT */
+header >.nav {
+    // background: orange;
+    height: 88px;
+    // padding: 20px;
+    // position: sticky;
+    // -webkit-position: sticky;
+    top: 0px;
+    /* compensate for shadow with negative margin */
+    margin-top: -16px;
+    /* content should fall over shadow and cover */
+    z-index: 6;
+  }
+
+
+
 .nav{
     display: inline-flex;
     flex-direction: row;
     width: 100%;
     background-color: #fff;
+    position: relative;
+    // position: fixed;
+    height: 88px;
+    top: 0;
+    z-index: 2;
     .checkbox_toggle{
         display: none;
     }
@@ -109,10 +172,6 @@ header, footer{
         }
     }
     a{
-        text-decoration: none;
-        color: $font-headerColor;
-        position: relative; 
-        transition: all 0.1s;
         font-size: 40px;
     }
     a::after{
@@ -125,15 +184,22 @@ header, footer{
         font-size: 20px;
         transition: all 0.2s;
     }
-
-    a:hover, a:active, a:focus{
-        color: $font-secondColor;
-        border-bottom: 1px solid $secondColor;
-    }
     a:hover::after, a:active::after, a:focus::after {
         display: inline-block;
         
     }
+}
+a{
+    transition: all 0.3s;
+    text-decoration: none;
+    color: $font-headerColor;
+    position: relative; 
+    border-bottom: 1px solid transparent;
+}
+a:hover, a:active, a:focus{
+    color: $font-secondColor;
+    border-bottom: 1px solid $secondColor;
+    text-decoration: none;
 }
 .btn{
     border-radius: 0px;
@@ -145,7 +211,11 @@ header, footer{
 .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
     box-shadow: none;
 }
-
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    background-color:$btn-primaryColorActive;
+    box-shadow: none;
+    color: #fafafa;
+}
 .btn{
     color: #fafafa;
     background-color: $btn-primaryColor;
@@ -154,16 +224,41 @@ header, footer{
     background-color: $btn-primaryColorHover;
     color: #fafafa;
 }
-.btn:active{
-    background-color:$btn-primaryColorActive;
-    box-shadow: none;
-    color: #fafafa;
-}
+// .btn:active{
+//     background-color:$btn-primaryColorActive;
+//     box-shadow: none;
+//     color: #fafafa;
+// }
 .btn:focus{
     background-color: $btn-primaryColorActive;
     box-shadow: none;
     color: #fafafa;
 }
+.tab{
+    cursor: pointer;
+    padding: 10px 40px;
+    a{
+        text-decoration: none;
+        font-size: $font-H3Size;
+        color: $font-pColor;
+    }
+    a:hover{
+        border-bottom: 1px solid $secondColor;
+        color: $secondColor;
+    }
+    a:active,a:focus{
+        color: $font-secondColor;
+    }
+}
+.active{
+    >a{
+        color: #04CBC3;
+        border-bottom: 1px solid #04CBC3;
+        text-decoration: none;
+    }
+}
+
+
 .contact{
     h2{
         color: $font-headerColor;
@@ -202,34 +297,44 @@ header, footer{
             padding-bottom: 0px;
             text-align: left;
         }
-        input{
+        input, textarea{
             border-radius: 0;
             border: 1px solid #999999;
             background-color:#FAFAFA;
-            height: 50px;
-            padding: 0 10px;
+            padding: 10px;
+            transition: all .3s;
         }
-        // input[type=message]{
-        //     
-        //     resize: vertical;
-        //     text-align: start;
-        // }
-        input[type=button]{
+        input{
+            height: 50px;
+        }
+        input[type=submit]{
             border-radius: 0px;
             cursor: pointer;
-            padding: 10px 40px;
         }
-        textarea.input {
-            resize: vertical;
-            min-height: 200px;
-            background-color:#FAFAFA;
-            padding: 10px;
-        }
+        // textarea.input {
+        //     resize: vertical;
+        //     min-height: 200px;
+        //     background-color:#FAFAFA;
+        //     padding: 10px;
+        // }
         input:focus, textarea:focus{
             outline: 2px solid $secondColor;
             border-color: transparent;
             box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
             background-color: transparent;
+        }
+        input[type=submit]{
+            color: #fafafa;
+            background-color: $btn-primaryColor;
+            transition: all .3s;
+        }
+        input[type=submit]{
+            color: #fafafa;
+            background-color: $btn-primaryColor;
+        }
+        input[type=submit]:hover{
+            background-color: $btn-primaryColorHover;
+            color: #fafafa;
         }
         
     }
@@ -392,6 +497,10 @@ header, footer{
             opacity: 0;
             transition: .5s ease-in-out;
         }
+    }
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
     }
     .contact{
         .emailinfo {

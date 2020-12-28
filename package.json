@@ -1,0 +1,24 @@
+{
+  "name": "Nomadesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epeilee/Nomadesign.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epeilee/Nomadesign/issues"
+  },
+  "homepage": "https://github.com/epeilee/Nomadesign#readme",
+  "dependencies": {
+    "formidable": "^1.2.2",
+    "swiper": "^6.2.0"
+  }
+}

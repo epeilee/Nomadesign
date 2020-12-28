@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio-Picasso</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="favicon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/tabs.js" defer></script>
+    
+</head>
+
+<body>
+    <header>
+        <div w3-include-html="myheader" class="nav m-auto"></div>
+    </header>
+    <ul class="projectTabs">
+        <li data-tab-target="#UI" class="tab"><a href="portfolio-fluapp">UI</a></li>
+        <li data-tab-target="#Web" class="active tab"><a href="portfolio-web">Web</a></li>
+        <li data-tab-target="#Graphic" class="tab"><a href="portfolio-visual">Visual</a></li>
+    </ul>
+    <div class="container tabContainer">
+        <div id="Web" data-tab-content class="uiContainer picasso active">
+            <div class="uiHeader">
+                <h3>Picasso Art Gallery<span>Web</span></h3>
+                <div>
+                    <a href="portfolio-ww" class="pre" >Previous Project</a> 
+                    <a href="portfolio-aft" class="next" >Next Project</a>
+                </div>
+            </div>
+            <div class="Content">
+                <div class="container even">
+                    <div class="row summary w70 bg-blend">
+                        <img src="/img/picasso/screen_pad_phone-1.png" alt="" class="studioHero">
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>About this Project</h3>
+                    <div class="row summary">
+                        <div class=" col-5">
+                            <ul class="ch">
+                                <li>
+                                    <p><strong>設計風格</strong></p>
+                                    <div>
+                                        <p>利用桌機橫式跟手機直式不同的編排方式呈現兩種設計變化，用手繪塗鴉跟豐富色彩吸引父母的注意力，包含新課程公告，報名系統，相簿呈現等多樣功能面設計。
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>主色彩</strong></p>
+                                    <div>
+                                        <p class="color brightRed">#E40A17&emsp;&emsp;Red</p>
+                                        <p class="color brightYellow">#FEEE35&emsp;&emsp;Yellow</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="demo col-6">
+                            <img src="/img/picasso/Picasso-home-0422.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container even">
+                    <h3>Details</h3>
+                    <div class="details">
+                        <!-- Swiper -->
+                        <div class="swiper-container swiperPicasso">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso-home-0422.jpg" alt=""></div>
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso_Website_Design_R3_News_events_EN.png" alt=""></div>
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso-schedule-newfooter.jpg" alt=""></div>
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso-awards.png" alt=""></div>
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso-programs.png" alt=""></div>
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso-enrolment.png" alt=""></div>
+                                <div class="swiper-slide"><img class="w70" src="/img/picasso/Picasso-contact.png" alt=""></div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /*Initialize Swiper 03*/ -->
+    <script>
+        var swiper = new Swiper('.swiper-container.swiperPicasso', {
+            autoHeight: true, //enable auto height
+            slidesPerView: 1,
+            spaceBetween: 100,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+        </script>
+
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

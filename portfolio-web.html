@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio-Web</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="favicon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/tabs.js" defer></script>
+    
+</head>
+
+<body>
+    <header>
+        <div w3-include-html="myheader" class="nav m-auto"></div>
+    </header>
+    <ul class="projectTabs">
+        <li data-tab-target="#UI" class="tab"><a href="portfolio-fluapp">UI</a></li>
+        <li data-tab-target="#Web" class="active tab"><a href="portfolio-web">Web</a></li>
+        <li data-tab-target="#Graphic" class="tab"><a href="portfolio-graphic">Visual</a></li>
+    </ul>
+    <div class="container tabContainer">
+        <div id="Web" data-tab-content class="uiContainer goodStudio active">
+            <div class="uiHeader">
+                <h3>The Good Studio Interior<span>Web</span></h3>
+                <div>
+                    <a href="portfolio-erp" class="pre" >Previous Project</a>   
+                    <a href="portfolio-ww" class="next" >Next Project</a>
+                </div>
+            </div>
+            <div class="Content">
+                <div class="container even">
+                    <div class="row summary w100">
+                        <img src="/img/tgs/goodstudio@2x.png" alt="" class="studioHero">
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>About this Project</h3>
+                    <div class="row summary">
+                        <div class=" col-4">
+                            <ul class="ch">
+                                <li>
+                                    <p><strong>設計風格</strong></p>
+                                    <div>
+                                        <p>融合東方與西方設計特色,表現沈穩大方,以滿版視覺表現大器空間感.
+                                            包含商業空間規劃以及住宅空間案例.
+                                        </p>
+                                        <p>使用一頁式網頁瀏覽滿版視覺,
+                                            呈現每個案例不同的空間風格,
+                                            圖片點入即可進到內頁瀏覽細節空間規劃以及設計師的規畫概念.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>主色彩</strong></p>
+                                    <div>
+                                        <p>色彩鮮明突出,強調中西融合</p>
+                                        <p class="color yellow">#FFDE32&emsp;&emsp;Bright Yellow</p>
+                                        <p class="color blue">#252638&emsp;&emsp;Dark Blue</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="demo col-8">
+                            <img src="/img/tgs/screen_pad_phone-good-studio.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container even">
+                    <h3>Details</h3>
+                    <div class="details">
+                        <!-- Swiper -->
+                        <div class="swiper-container swiper03">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="w100" src="/img/tgs/goodstudio.png" alt=""></div>
+                                <div class="swiper-slide"><img class="w80" src="/img/tgs/about.jpg" alt=""></div>
+                                <div class="swiper-slide"><img class="w80" src="/img/tgs/project1.jpg" alt=""></div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--link subpage-->
+
+    
+    <!-- /*Initialize Swiper 03*/ -->
+    <script>
+    var swiper = new Swiper('.swiper-container.swiper03', {
+        autoHeight: true, //enable auto height
+        slidesPerView: 2,
+        spaceBetween: 50,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    </script>
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

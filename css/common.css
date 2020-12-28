@@ -25,23 +25,23 @@ body, html {
 }
 
 h1 {
-  font-size: 90px;
+  font-size: 60px;
   color: #333333;
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 50px;
   color: #333333;
   padding-bottom: 40px;
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 30px;
   color: #04CBC3;
 }
 
 h4 {
-  font-size: 30px;
+  font-size: 24px;
   color: #333333;
 }
 
@@ -53,12 +53,18 @@ p {
   line-height: 2;
 }
 
+b, strong {
+  font-weight: bolder;
+}
+
 .container {
   max-width: 100%;
   margin: 0 auto;
   padding-bottom: 100px;
   padding-top: 60px;
   background-color: #fff;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .row {
@@ -67,8 +73,53 @@ p {
 }
 
 header, footer {
-  padding-top: 10px;
   width: 100%;
+}
+
+header {
+  /* negative top allows for 16 pixels of movement before sticking */
+  top: -24px;
+  height: 88px;
+  z-index: 5;
+}
+
+/* PSEUDO ELEMENTS to create drop-shadow */
+header::before,
+header::after {
+  content: '';
+  display: block;
+  height: 24px;
+  /* make pseudo elements sticky as well */
+}
+
+/* SHADOW */
+header::before {
+  top: 64px;
+  /* shadow is at bottom of element, so at 48 + 16 = 64px */
+  -webkit-box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* COVER */
+header::after {
+  /* linear gradient from background color to transparent acts as
+     a transition effect so the shadow appears gradually */
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(20%, #fafafa), color-stop(20%, #f1f2f3), color-stop(5%, #f1f2f3), to(transparent));
+  background: linear-gradient(180deg, #fff, #fafafa 20%, #f1f2f3 20%, #f1f2f3 5%, transparent);
+  position: relative;
+  top: -10px;
+  /* cover should fall over shadow */
+  z-index: 4;
+}
+
+/* HEADER CONTENT */
+header > .nav {
+  height: 88px;
+  top: 0px;
+  /* compensate for shadow with negative margin */
+  margin-top: -16px;
+  /* content should fall over shadow and cover */
+  z-index: 6;
 }
 
 .nav {
@@ -81,6 +132,10 @@ header, footer {
           flex-direction: row;
   width: 100%;
   background-color: #fff;
+  position: relative;
+  height: 88px;
+  top: 0;
+  z-index: 2;
 }
 
 .nav .checkbox_toggle {
@@ -132,11 +187,6 @@ header, footer {
 }
 
 .nav a {
-  text-decoration: none;
-  color: #333333;
-  position: relative;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
   font-size: 40px;
 }
 
@@ -152,13 +202,23 @@ header, footer {
   transition: all 0.2s;
 }
 
-.nav a:hover, .nav a:active, .nav a:focus {
-  color: #04CBC3;
-  border-bottom: 1px solid #04CBC3;
-}
-
 .nav a:hover::after, .nav a:active::after, .nav a:focus::after {
   display: inline-block;
+}
+
+a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover, a:active, a:focus {
+  color: #04CBC3;
+  border-bottom: 1px solid #04CBC3;
+  text-decoration: none;
 }
 
 .btn {
@@ -175,6 +235,13 @@ header, footer {
           box-shadow: none;
 }
 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background-color: #666666;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fafafa;
+}
+
 .btn {
   color: #fafafa;
   background-color: #333333;
@@ -185,18 +252,37 @@ header, footer {
   color: #fafafa;
 }
 
-.btn:active {
+.btn:focus {
   background-color: #666666;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fafafa;
 }
 
-.btn:focus {
-  background-color: #666666;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #fafafa;
+.tab {
+  cursor: pointer;
+  padding: 10px 40px;
+}
+
+.tab a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #666666;
+}
+
+.tab a:hover {
+  border-bottom: 1px solid #04CBC3;
+  color: #04CBC3;
+}
+
+.tab a:active, .tab a:focus {
+  color: #04CBC3;
+}
+
+.active > a {
+  color: #04CBC3;
+  border-bottom: 1px solid #04CBC3;
+  text-decoration: none;
 }
 
 .contact h2 {
@@ -258,25 +344,22 @@ header, footer {
   text-align: left;
 }
 
-.contact .msg input {
+.contact .msg input, .contact .msg textarea {
   border-radius: 0;
   border: 1px solid #999999;
   background-color: #FAFAFA;
-  height: 50px;
-  padding: 0 10px;
+  padding: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-.contact .msg input[type=button] {
+.contact .msg input {
+  height: 50px;
+}
+
+.contact .msg input[type=submit] {
   border-radius: 0px;
   cursor: pointer;
-  padding: 10px 40px;
-}
-
-.contact .msg textarea.input {
-  resize: vertical;
-  min-height: 200px;
-  background-color: #FAFAFA;
-  padding: 10px;
 }
 
 .contact .msg input:focus, .contact .msg textarea:focus {
@@ -285,6 +368,23 @@ header, footer {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: transparent;
+}
+
+.contact .msg input[type=submit] {
+  color: #fafafa;
+  background-color: #333333;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contact .msg input[type=submit] {
+  color: #fafafa;
+  background-color: #333333;
+}
+
+.contact .msg input[type=submit]:hover {
+  background-color: #555555;
+  color: #fafafa;
 }
 
 .hero {
@@ -455,6 +555,10 @@ header, footer {
     opacity: 0;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+  }
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .contact .emailinfo {
     padding: 0;

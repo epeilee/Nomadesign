@@ -10,7 +10,24 @@
         font-size: 20px;
         padding-top: 40px;
         line-height: 2.4;
+        font-weight: 300;
     }
+    a{
+        color: $font-headerColor;
+        padding-top: 60px;
+        display: inline-block;
+        text-decoration: none;
+        //---buttom line----//
+        background-repeat: repeat-x;
+        background-image: linear-gradient(to right,currentColor 100%,currentColor 0);
+        background-size: 1px 1px;
+        background-position: 0 100%;
+        white-space: initial;   
+    }
+    a:hover, a:active{
+        color: #666666;
+    }
+    
 }
 .works{
     display: flex;

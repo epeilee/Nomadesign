@@ -26,7 +26,6 @@
 }
 
 .hero .personDiscription {
-  font-size: 50px;
   text-align: center;
 }
 
@@ -89,7 +88,7 @@
   padding: 60px;
   min-height: 350px;
   height: 48vh;
-  z-index: 100;
+  z-index: 2;
   position: relative;
   top: 50px;
   text-align: left;
@@ -138,6 +137,7 @@
 
 .project .moreDesignSection a {
   display: block;
+  font-size: 0;
 }
 
 .project .moreDesignSection .col-xl-4 {
@@ -173,15 +173,11 @@ h3::before {
 
 h3::after {
   width: 30%;
-  left: 255px;
 }
 
-.web h3::after {
-  left: 296px;
-}
-
-.visual h3::after {
-  left: 323px;
+.col-p15 {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media (max-width: 575px) {

@@ -8,6 +8,24 @@
   font-size: 20px;
   padding-top: 40px;
   line-height: 2.4;
+  font-weight: 300;
+}
+
+.hero a {
+  color: #333333;
+  padding-top: 60px;
+  display: inline-block;
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(100%, currentColor), color-stop(0, currentColor));
+  background-image: linear-gradient(to right, currentColor 100%, currentColor 0);
+  background-size: 1px 1px;
+  background-position: 0 100%;
+  white-space: initial;
+}
+
+.hero a:hover, .hero a:active {
+  color: #666666;
 }
 
 .works {

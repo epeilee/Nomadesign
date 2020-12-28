@@ -3,21 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style type="text/css">
-        @font-face {
-          font-family: orpheus-pro;
-          src: url(https://use.typekit.net/af/07139b/000000000000000000016ea5/27/l?subset_id=2&fvd=n4&v=3)
-              format("woff2"),
-            url(https://use.typekit.net/af/07139b/000000000000000000016ea5/27/d?subset_id=2&fvd=n4&v=3)
-              format("woff"),
-            url(https://use.typekit.net/af/07139b/000000000000000000016ea5/27/a?subset_id=2&fvd=n4&v=3)
-              format("opentype");
-          font-weight: 400;
-          font-style: normal;
-          font-display: auto;
-        }
-    </style>
     <title>Me</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="favicon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -26,30 +13,31 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
+    <header>
+        <div w3-include-html="myheader" class="nav m-auto"></div>
+    </header>
     <div class="container heroMe">
         <div class="row">
-            <header>
-                <div w3-include-html="myheader.html" class="m-auto"></div>
-                <div class="hero">
-                    <div class="name">
-                        <div class="personLogo">
-                            <img src="img/mePhoto.png" alt="">
-                        </div>
-                        <h2 class="personName">I’m Rachel Lee</h2>
+            <div class="hero">
+                <div class="name">
+                    <div class="personLogo">
+                        <img src="img/mePhoto.png" alt="">
                     </div>
-                    <h4 class="personDiscription">
-                        <div class="en">An experienced web and UI designer specializing in</br> 
-                            responsive web design, visual design, style guidelines to</br> 
-                            consistent the design rules in all devices. 
-                        </div>
-                        <div class="ch">我是李宜珮，有超過10年的平面和網頁設計工作經驗。</br>
-                            擅長響應式網頁，UI設計，視覺設計，設計規範，以一致性的視覺表現呈現在所有設備上。</br>
-                            我對一切用戶體驗/界面設計充滿熱情並且積極求取新知，</br>
-                            不斷精進我的設計技能及審美觀，以實現客戶需求也能同時重視美感呈現。
-                        </div>
-                    </h4>
+                    <h2 class="personName">I’m Rachel Lee</h2>
                 </div>
-            </header>
+                <h4 class="personDiscription">
+                    <div class="en">An experienced web and UI designer specializing in</br> 
+                        responsive web design, visual design, style guidelines to</br> 
+                        consistent the design rules in all devices. 
+                    </div>
+                    <div class="ch">我是李宜珮，有超過10年的平面和網頁設計工作經驗。</br>
+                        擅長響應式網頁，UI設計，視覺設計，設計規範，以一致性的視覺表現呈現在所有設備上。</br>
+                        我對一切用戶體驗/界面設計充滿熱情並且積極求取新知，</br>
+                        不斷精進我的設計技能及審美觀，以實現客戶需求也能同時重視美感呈現。
+                    </div>
+                    <a href="/resume" target="_blank">Download My Resume</a>
+                </h4>
+            </div>
         </div>
     </div>
     <div class="container myexperience">
@@ -192,7 +180,7 @@
     </div>
     <div class="container contact" id="contact">
         <div class="row">
-            <div w3-include-html="contact.html" class="m-auto"></div>
+            <div w3-include-html="contact" class="m-auto"></div>
         </div>
     </div>
     <script>
