@@ -5,7 +5,9 @@
 //     height: 300px;
 // }
 
-
+:root {
+    --swiper-theme-color: #00BCD3;
+  }
 [data-tab-content]{
     display: none;
 }
@@ -507,8 +509,15 @@ img.shadow0{
         height: 600px;
     }
 }
-
-
+/*----pagenation-----*/
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 0px;
+    background: #000;
+    opacity: 0.2;
+  }
 
 /*---slider2-----*/
 .swiper02 {
