@@ -5,9 +5,6 @@
 //     height: 300px;
 // }
 
-:root {
-    --swiper-theme-color: #00BCD3;
-  }
 [data-tab-content]{
     display: none;
 }
@@ -518,7 +515,10 @@ img.shadow0{
     background: #000;
     opacity: 0.2;
   }
-
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--swiper-pagination-color, var(--swiper-theme-color));
+}
 /*---slider2-----*/
 .swiper02 {
     width: 100%;
