@@ -125,6 +125,11 @@
   margin-bottom: 100px;
 }
 
+.VMware .swiperHero img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .uiHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -598,16 +603,9 @@ img.shadow0 {
 }
 
 /*---slider2-----*/
-.swiper02 {
+.swiper02, .swiper03 {
   width: 100%;
   height: 100%;
-}
-
-.swiper02 img {
-  box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
-  -khtml-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -615,7 +613,11 @@ img.shadow0 {
   padding: 0;
 }
 
-.erp .swiper-container.swiper02 .swiper-pagination {
+.erp .erpSwiper02 img, .erp .erpSwiper03 img {
+  margin-bottom: 20px;
+}
+
+.erp .erpSwiper03 .swiper-pagination {
   display: none;
 }
 

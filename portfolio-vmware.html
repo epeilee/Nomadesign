@@ -17,8 +17,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/tabs.js" defer></script>
-    
-    
 </head>
 
 <body>
@@ -43,27 +41,27 @@
             <div class="swiper-container swiperHero">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="img/ethan/slide-dashboard.png" alt="">
+                        <img src="img/ethan/slide-dashboard.png" alt="" class="wAuto">
                         <p>Dashbord<br>x<br>About Us</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/ethan/slide-Finance.png" alt="">
+                        <img src="img/ethan/slide-Finance.png" alt="" class="wAuto">
                         <p>My Tickets<br>x<br>Spend Variance</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/ethan/slide-service.png" alt="">
+                        <img src="img/ethan/slide-service.png" alt="" class="wAuto">
                         <p>Service Management<br>x<br> Service Request</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/ethan/slide-form.png" alt="">
+                        <img src="img/ethan/slide-form.png" alt="" class="wAuto">
                         <p>Form Management<br>x<br>Approval Process</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/ethan/slide-mobile.png" alt="">
+                        <img src="img/ethan/slide-mobile.png" alt="" class="wAuto">
                         <p>Mobile View</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/ethan/slide-widget.png" alt="">
+                        <img src="img/ethan/slide-widget.png" alt="" class="wAuto">
                         <p>Widget</p>
                     </div>
                 </div>
@@ -103,6 +101,27 @@
                 </div>
                 <div class="container even">
                     <div class="row summary">
+                        <h3>Guidelines</h3>
+                        <div class="demo">
+                            <!-- Swiper 02 -->
+                            <div class="swiper-container swiperGuideline">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/1typography.png" class="wAuto" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/2colors-palette.png" class="wAuto" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/2-2colorstyle.png" class="wAuto" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/3icon.png" class="wAuto" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/4button.png" class="wAuto" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/7inputfield.png" class="wAuto" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/ethan/guidelines/9tab.png" class="wAuto" alt=""></div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row summary">
                         <h3>Form Management</h3>
                         <div class="demo col-6">
                             <!-- Swiper 02 -->
@@ -131,7 +150,7 @@
                         
                     </div>
                 </div>
-                <div class="container">
+                <div class="container even">
                     <div class="row summary">
                         <h3>Finance</h3>
                         <p class="col-6">
@@ -156,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container even">
+                <div class="container">
                     <div class="row summary">
                         <h3>Approval Process</h3>
                         <img src="img/ethan/approval/approval process.png" alt="" class="approvalProcess">
@@ -189,86 +208,51 @@ It is necessary to design the interface for three different roles: the requester
                         
                     </div>
                 </div>
-                
-            </div>
-
-        </div>
-        <div id="Web" data-tab-content>
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/flu/influenzas fast testing-flow chart.png" alt="">
-                        <p>Flow Chart</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/flu/influenzas fast testing-ui flow.png" alt="">
-                        <p>UI Flow</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/flu/influenzas fast testing-1.png" alt="">
-                        <p>Test pages</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/flu/influenzas fast testing-2.png" alt="">
-                        <p>Result pages</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/flu/influenzas fast testing-3.png" alt="">
-                        <p>Industration</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/flu/influenzas fast testing-4.png" alt="">
-                        <p>User guide</p>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div id="Graphic" data-tab-content></div>
     </div>
     <!--link subpage-->
     <script>
     /*<!-- Initialize Swiper 01-->*/
-        var swiper = new Swiper('.swiper-container', {
+        var swiperHero = new Swiper('.swiperHero', {
             slidesPerView: 1,
             autoplay: {
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
             centeredSlides: true,
-            spaceBetween: 10,
+            spaceBetween: 30,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
         });
-
-    /*<!-- Initialize Swiper 01-->*/
-        // var swiper = new Swiper('.swiper-container', {
-        // spaceBetween: 30,
-        // centeredSlides: true,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
-        // });
+        /*<!-- Initialize Swiper swiperGuideline-->*/
+    var swiperGuideline = new Swiper('.swiperGuideline', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            // stopOnLastSlide: true, 
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
     /*<!-- Initialize Swiper 02-->*/
-        var swiper = new Swiper('.swiper-container.swiper02', {
+        var swiper02 = new Swiper('.swiper02', {
         slidesPerView: 1,
         spaceBetween: 10,
         centeredSlides: true,
         autoplay: {
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
         },
         pagination: {
