@@ -90,6 +90,11 @@
       align-content: center;
 }
 
+.flu .swiperHero p {
+  display: inline-block;
+  text-align: right;
+}
+
 .VMware .demo {
   display: -webkit-box;
   display: -ms-flexbox;
