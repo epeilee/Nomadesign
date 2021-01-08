@@ -135,6 +135,11 @@
           box-shadow: none;
 }
 
+.VMware .swiperHero p {
+  display: inline-block;
+  text-align: right;
+}
+
 .VMware .swiperGuideline .swiper-slide p {
   display: inline-block;
   text-align: right;
@@ -631,7 +636,7 @@ img.shadow0 {
   display: none;
 }
 
-.erp .erpSwiper02 p {
+.erp .erpSwiper01 p, .erp .erpSwiper02 p {
   display: inline-block;
   text-align: right;
 }

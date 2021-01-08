@@ -114,6 +114,10 @@
         img{
             box-shadow: none;
         }
+        p{
+            display: inline-block;
+            text-align: right;
+        }
     }
     .swiperGuideline{
         .swiper-slide{
@@ -562,7 +566,7 @@ img.shadow0{
             display: none;
         }
     }
-    .erpSwiper02{
+    .erpSwiper01,.erpSwiper02{
         p{
             display: inline-block;
             text-align: right;
