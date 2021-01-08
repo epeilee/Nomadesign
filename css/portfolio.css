@@ -130,6 +130,11 @@
           box-shadow: none;
 }
 
+.VMware .swiperGuideline .swiper-slide p {
+  display: inline-block;
+  text-align: right;
+}
+
 .uiHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,6 +624,11 @@ img.shadow0 {
 
 .erp .erpSwiper03 .swiper-pagination {
   display: none;
+}
+
+.erp .erpSwiper02 p {
+  display: inline-block;
+  text-align: right;
 }
 
 /*----slider3-----*/

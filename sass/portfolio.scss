@@ -107,6 +107,15 @@
             box-shadow: none;
         }
     }
+    .swiperGuideline{
+        .swiper-slide{
+            p{
+                display: inline-block;
+                text-align: right;
+            }
+        }
+        
+    }
 }
 .uiHeader{
     display: flex;
@@ -543,6 +552,12 @@ img.shadow0{
     .erpSwiper03{
         .swiper-pagination{
             display: none;
+        }
+    }
+    .erpSwiper02{
+        p{
+            display: inline-block;
+            text-align: right;
         }
     }
 }
