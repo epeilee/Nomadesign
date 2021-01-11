@@ -367,6 +367,10 @@ a:hover, a:active, a:focus{
     header{
         position: relative;
         overflow-y: hidden;
+        background-color: transparent;
+    }
+    header::before{
+        box-shadow:none;
     }
     h1{
         font-size: $font-H1Size-m;
@@ -501,6 +505,8 @@ a:hover, a:active, a:focus{
     .container{
         padding-right: 15px;
         padding-left: 15px;
+        // position: absolute;
+        top: 0;
     }
     .contact{
         .emailinfo {
