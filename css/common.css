@@ -419,6 +419,7 @@ a:hover, a:active, a:focus {
     position: relative;
     overflow-y: hidden;
     background-color: transparent;
+    height: 100vh;
   }
   header::before {
     -webkit-box-shadow: none;
@@ -506,9 +507,14 @@ a:hover, a:active, a:focus {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
+  .heroMe {
+    top: 0;
+    position: absolute;
+  }
   .nav {
     position: relative;
     padding: 20px;
+    height: 100vh;
   }
   .nav div {
     width: 30px;
