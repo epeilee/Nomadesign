@@ -113,7 +113,7 @@ header::after {
 }
 
 /* HEADER CONTENT */
-header > .nav {
+.nav {
   height: 88px;
   top: 0px;
   /* compensate for shadow with negative margin */
