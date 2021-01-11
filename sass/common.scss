@@ -364,8 +364,12 @@ a:hover, a:active, a:focus{
     padding-left: 0px;
 }
 @media (max-width: 575px)  {
-    header{
+    body{
         position: relative;
+    }
+    
+    header{
+        position: absolute;
         overflow-y: hidden;
         background-color: transparent;
         height: 100vh;

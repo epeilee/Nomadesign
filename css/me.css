@@ -189,6 +189,9 @@
 }
 
 @media (max-width: 575px) {
+  .Me {
+    position: relative;
+  }
   .hero .ch {
     font-size: 20px;
     line-height: 1.8;
