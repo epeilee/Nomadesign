@@ -133,24 +133,35 @@
     <!--link subpage-->
     <script>
     /*<!-- Initialize Swiper 01-->*/
-        var swiper = new Swiper('.swiper-container.swiperHero', {
+    var swiper = new Swiper('.swiper-container.swiperHero', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 0,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            320: {
             slidesPerView: 1,
-            centeredSlides: true,
-            spaceBetween: 0,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            spaceBetween: 10,
             },
-        });
+            1024: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            }
+        }
+
+    });
     /*<!-- Initialize Swiper 02-->*/
     var swiper = new Swiper('.swiper-container.swiper02', {
-        slidesPerView: 3,
-        spaceBetween: 10,
+        // slidesPerView: 3,
+        // spaceBetween: 10,
         centeredSlides: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -159,7 +170,17 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        });
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            },
+            1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            }
+        }
+    });
     </script>
     <script>
         w3.includeHTML();

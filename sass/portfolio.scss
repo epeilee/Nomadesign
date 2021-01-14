@@ -793,5 +793,10 @@ img.shadow0{
             flex-wrap: wrap;
         } 
     }
+    .swiper-pagination-bullet{
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+    }
 }
 
