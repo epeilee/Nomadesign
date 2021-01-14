@@ -613,6 +613,9 @@ img.shadow0{
     header::before{
         box-shadow:none;
     }
+    header::after {
+         background: transparent;
+    }
     h1{
         font-size: $font-H1Size-m;
         color: $font-headerColor;
@@ -697,7 +700,7 @@ img.shadow0{
     .nav{
         position: relative;
         padding: 20px;
-        height: 100vh;
+        height: 100px;
         background-color: transparent;
         div{
             width: 30px;
