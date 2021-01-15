@@ -68,6 +68,9 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <div class="Content">
                 <div class="container">
@@ -75,13 +78,11 @@
                     <div class="row summary">
                         <p class="col-xl-8 col-12">
                             <span class="en">
-
                                 This flu-testing app is designed for <strong>medical professionals</strong>to perform and record a large number of tests, with the ability to upload or sync with patient database if required.<br>
                                 Step 1: <strong>Take a picture</strong> of the testing strip with the internal camera in the phone.<br>
                                 Step 2: Wait for<strong>3 seconds</strong> of analysis of flu results<br>
                                 Step 3: The test results will either be shown as<strong>positive or negative</strong>for the Influenza A and/or B viruses, and will tell you <strong>what the expected/ common symptoms are</strong>.<br>
                                 Step 4: <strong>Save the test results</strong> and the data will be uploaded to the database. Reduce the testing process and upload the test results manually, and allows for mass screening and documentation.<br>
-                                
                             </span>
                             <span class="ch">
                                 這個流感測試App是為執行<strong>大量測試</strong>的<strong>專業醫療人員</strong>而設計的。<br>
@@ -123,6 +124,9 @@
                             </div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -134,12 +138,16 @@
     <script>
     /*<!-- Initialize Swiper 01-->*/
     var swiper = new Swiper('.swiper-container.swiperHero', {
-        slidesPerView: 1,
+        // slidesPerView: 1,
         centeredSlides: true,
-        spaceBetween: 0,
+        // spaceBetween: 0,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
         breakpoints: {
             320: {
@@ -151,7 +159,6 @@
             spaceBetween: 10,
             }
         }
-
     });
     /*<!-- Initialize Swiper 02-->*/
     var swiper = new Swiper('.swiper-container.swiper02', {
@@ -174,6 +181,7 @@
             320: {
             slidesPerView: 1,
             spaceBetween: 10,
+            
             },
             1024: {
             slidesPerView: 3,

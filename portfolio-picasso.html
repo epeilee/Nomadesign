@@ -87,6 +87,9 @@
                             </div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -97,22 +100,33 @@
     <script>
         var swiper = new Swiper('.swiper-container.swiperPicasso', {
             autoHeight: true, //enable auto height
-            slidesPerView: 1,
-            spaceBetween: 100,
+            // slidesPerView: 1,
+            // spaceBetween: 100,
             loop: true,
             centeredSlides: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                
+                },
+                1024: {
+                slidesPerView: 1,
+                spaceBetween: 100,
+                }
+            }
         });
         </script>
 

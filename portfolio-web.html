@@ -17,8 +17,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/tabs.js" defer></script>
-    
-    
 </head>
 
 <body>
@@ -105,22 +103,32 @@
     <script>
     var swiper = new Swiper('.swiper-container.swiper03', {
         autoHeight: true, //enable auto height
-        slidesPerView: 2,
-        spaceBetween: 50,
+        // slidesPerView: 2,
+        // spaceBetween: 50,
         loop: true,
         centeredSlides: true,
-        autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
+        // autoplay: {
+        //         delay: 4000,
+        //         disableOnInteraction: false,
+        //     },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
             },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            }
+        }
     });
     </script>
     <script>

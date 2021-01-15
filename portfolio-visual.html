@@ -17,8 +17,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/tabs.js" defer></script>
-    
-    
 </head>
 
 <body>
@@ -64,6 +62,9 @@
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
                 <div id="parkour" class="container">
@@ -86,6 +87,9 @@
                             </div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -96,17 +100,31 @@
     <script>
         /*<!-- Initialize Swiper 01-->*/
         var swiper = new Swiper('.swiper-container.swiperPage1', {
-            slidesPerView: 2,
+            // slidesPerView: 2,
             centeredSlides: true,
-            spaceBetween: 0,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
+            // spaceBetween: 0,
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                }
+            }
         });
         </script>
 

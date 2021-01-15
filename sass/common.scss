@@ -104,32 +104,20 @@ header::after {
     z-index: 4;
     // position: absolute;
 }
-/* HEADER CONTENT */
-.nav {
-    // background: orange;
-    height: 88px;
-    // padding: 20px;
-    // position: sticky;
-    // -webkit-position: sticky;
-    top: 0px;
-    /* compensate for shadow with negative margin */
-    margin-top: -16px;
-    /* content should fall over shadow and cover */
-    z-index: 6;
-  }
-
-
-
 .nav{
     display: inline-flex;
     flex-direction: row;
+    height: 88px;
     width: 100%;
+    top: 0px;
     background-color: #fff;
     position: relative;
     // position: fixed;
     height: 88px;
     top: 0;
+    margin-top: -16px;
     z-index: 2;
+    z-index: 6;
     .checkbox_toggle{
         display: none;
     }

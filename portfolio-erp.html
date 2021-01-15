@@ -63,6 +63,9 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <div class="Content">
                 <div class="container">
@@ -129,6 +132,9 @@
                             </div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -178,6 +184,9 @@
                             </div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
                     </div>
                 </div>
@@ -188,27 +197,41 @@
     <script>
     /*<!-- Initialize Swiper 01-->*/
         var erpHero = new Swiper('.erpHero', {
-            slidesPerView: 1,
+            // slidesPerView: 1,
             centeredSlides: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            spaceBetween: 0,
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
+            // spaceBetween: 0,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                }
+            }
         });
         /*<!-- Initialize Swiper 02-->*/
         var erpSwiper02 = new Swiper('.erpSwiper02', {
-            slidesPerView: 1,
-            spaceBetween: 100,
+            // slidesPerView: 1,
+            // spaceBetween: 100,
             centeredSlides: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -217,16 +240,27 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                
+                },
+                1024: {
+                slidesPerView: 1,
+                spaceBetween: 100,
+                }
+            }
         });
     /*<!-- Initialize Swiper 03-->*/
         var erpSwiper03 = new Swiper('.erpSwiper03', {
-            slidesPerView: 3,
-            spaceBetween: 100,
+            // slidesPerView: 3,
+            // spaceBetween: 100,
             centeredSlides: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -235,6 +269,17 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                
+                },
+                1024: {
+                slidesPerView: 3,
+                spaceBetween: 100,
+                }
+            }
         });
     </script>
     <script>

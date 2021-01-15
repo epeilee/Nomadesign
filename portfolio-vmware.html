@@ -67,6 +67,9 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <div class="Content">
                 <div class="container">
@@ -138,6 +141,9 @@
                                 </div>
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                         </div>
                     </div>
@@ -159,6 +165,9 @@
                                 </div>
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                         </div>
                         <p class="col-xl-6 col-12">
@@ -193,6 +202,9 @@
                                 </div>
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                         </div>
                     </div>
@@ -215,6 +227,9 @@
                                 </div>
                                 <!-- Add Pagination -->
                                 <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                         </div>
                         <p class="col-xl-6 col-12">
@@ -237,28 +252,42 @@
     <script>
     /*<!-- Initialize Swiper 01-->*/
         var swiperHero = new Swiper('.swiperHero', {
-            slidesPerView: 1,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
+            // slidesPerView: 1,
+            // autoplay: {
+            //     delay: 4000,
+            //     disableOnInteraction: false,
+            // },
             centeredSlides: true,
-            spaceBetween: 30,
+            // spaceBetween: 30,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                },
+                1024: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                }
+            }
         });
         /*<!-- Initialize Swiper swiperGuideline-->*/
     var swiperGuideline = new Swiper('.swiperGuideline', {
-        slidesPerView: 1,
-        spaceBetween: 0,
+        // slidesPerView: 1,
+        // spaceBetween: 0,
         centeredSlides: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-            // stopOnLastSlide: true, 
-        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        //     // stopOnLastSlide: true, 
+        // },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -267,16 +296,26 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            }
+        }
         });
     /*<!-- Initialize Swiper 02-->*/
         var swiper02 = new Swiper('.swiper02', {
-        slidesPerView: 1,
-        spaceBetween: 10,
+        // slidesPerView: 1,
+        // spaceBetween: 10,
         centeredSlides: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        // },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -285,6 +324,16 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            }
+        }
         });
     </script>
     <script>
