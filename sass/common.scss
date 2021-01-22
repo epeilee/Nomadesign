@@ -70,7 +70,7 @@ header{
     // position: sticky;
       /* negative top allows for 16 pixels of movement before sticking */
     top: -24px; 
-    height: 88px;
+    height: auto;
     z-index: 5;
     // box-shadow: -4px -4px 20px 0px rgba(255,255,255,1), 4px 4px 25px 0 rgba(0,0,0,.1);
 }
