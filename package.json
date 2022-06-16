@@ -19,6 +19,6 @@
   "homepage": "https://github.com/epeilee/Nomadesign#readme",
   "dependencies": {
     "formidable": "^1.2.2",
-    "swiper": "^6.2.0"
+    "swiper": "^6.8.4"
   }
 }

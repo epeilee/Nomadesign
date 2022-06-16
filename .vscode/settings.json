@@ -1,0 +1,25 @@
+
+{
+    "liveSassCompile.settings.formats": [
+        
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css" //此為輸出的路徑，可以自行更改
+        },
+    ],
+    "json.schemas": [
+        
+    ],
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "vim.useCtrlKeys": false,
+    "vim.useSystemClipboard": true,
+    "liveSassCompile.settings.autoprefix": [],
+    "liveServer.settings.port": 5501,
+}

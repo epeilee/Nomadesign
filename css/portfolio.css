@@ -8,15 +8,10 @@
 
 .projectTabs {
   padding-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0 auto;
   border-bottom: 1px solid #fff;
-  position: -webkit-sticky;
   position: sticky;
   top: -88px;
   width: 100%;
@@ -31,12 +26,12 @@
   padding: 60px 0 0 0;
 }
 
-.uiContainer {
+.container {
   width: 100%;
   margin: 0 auto;
 }
 
-.uiContainer h3 {
+.container h3 {
   text-align: center;
   color: #333333;
   padding: 20px 0 60px 0;
@@ -48,18 +43,10 @@
 }
 
 .Content .summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .Content .summary h3 {
@@ -76,18 +63,20 @@
   font-family: 'open Sans', Noto Sans SC;
 }
 
-.Content .container.even {
+.container.even {
   background-color: #fafafa;
 }
 
-.Content .container.even p {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container.even p {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.container.even img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }
 
 .flu .swiperHero p {
@@ -95,12 +84,71 @@
   text-align: right;
 }
 
-.VMware .demo {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.flu .slide {
+  height: 60%;
+  overflow: hidden;
+}
+
+.flu .slide img {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flu .carousel.detailslide {
+  height: 70vh;
+  overflow: hidden;
+}
+
+.flu .carousel.detailslide .carousel-item {
   display: flex;
-  padding-right: 5%;
-  padding-left: 5%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flu .carousel.detailslide .carousel-item img {
+  height: 40%;
+  width: auto;
+}
+
+.carousel-caption {
+  background-color: rgba(216, 216, 216, 0.7);
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  left: auto;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators li {
+  background-color: #04CBC3;
+}
+
+.carousel img.carousel-control-prev-icon, .carousel img.carousel-control-next-icon {
+  width: 30%;
+  height: auto;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(/img/icons/pagePreview.png);
+}
+
+.carousel-control-next-icon {
+  background-image: url(/img/icons/pageNext.png);
+}
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+  border-bottom: 0px solid #04CBC3;
+}
+
+.VMware .demo {
+  display: flex;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
 }
 
 .VMware .d-dashboard {
@@ -109,6 +157,7 @@
 
 .VMware .d-dashboard img {
   width: 100%;
+  max-height: 600px;
 }
 
 .VMware .m-dashboard {
@@ -130,45 +179,65 @@
   margin-bottom: 100px;
 }
 
-.VMware .swiperHero img {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.VMware .swiperHero, .VMware .swiperGuideline, .VMware .swiperPages {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.VMware .swiperHero p {
+.VMware .swiperHero .swiper-slide, .VMware .swiperGuideline .swiper-slide, .VMware .swiperPages .swiper-slide {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.VMware .swiperHero .swiper-slide img, .VMware .swiperGuideline .swiper-slide img, .VMware .swiperPages .swiper-slide img {
+  width: auto;
+  text-align: center;
+  max-height: 500px;
+  box-shadow: -20px -20px 10px 0px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -khtml-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.VMware .swiperHero .swiper-slide p, .VMware .swiperGuideline .swiper-slide p, .VMware .swiperPages .swiper-slide p {
   display: inline-block;
   text-align: right;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
 }
 
 .VMware .swiperGuideline .swiper-slide p {
   display: inline-block;
   text-align: right;
+  position: absolute;
+  bottom: 50%;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
 }
 
 .uiHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 100px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 1200px;
   margin: 0 auto;
 }
 
 .uiHeader h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #333333;
+  text-align: left;
 }
 
 .uiHeader span {
@@ -191,8 +260,6 @@
   position: absolute;
   left: -100px;
   bottom: 60px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.9);
   width: 50%;
@@ -228,21 +295,28 @@
   width: 30%;
 }
 
-.aft .swiper-slide {
-  height: auto;
+.aft {
+  position: relative;
 }
 
-.aft .summary {
-  position: relative;
+.aft .swiper-slide {
+  width: 100%;
+}
+
+.aft .swiper-slide img {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
 }
 
 .aft .details {
   z-index: 2;
-  position: relative;
-  top: -430px;
+  position: fixed;
+  top: 50%;
   right: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 50%;
+  width: 40%;
   padding: 20px 40px;
 }
 
@@ -304,13 +378,17 @@
   padding-right: 10px;
 }
 
+.details img {
+  width: 30%;
+  box-shadow: -20px -20px 10px 0px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  -khtml-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
 .uiContainer .studioHero {
   width: 100%;
   height: auto;
-}
-
-.uiContainer img {
-  width: 100%;
 }
 
 .uiContainer img.h600 {
@@ -417,15 +495,9 @@
 }
 
 .uiContainer .ch li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .uiContainer .ch li p {
@@ -475,7 +547,6 @@
 }
 
 .uiContainer .gradientGold::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(#dec490), to(#95825d));
   background: linear-gradient(180deg, #dec490 0%, #95825d 100%);
 }
 
@@ -537,90 +608,22 @@
   width: 100%;
 }
 
-/*-----swiper--------*/
-.swiper-container {
-  width: 1200px;
-  height: 100%;
-  margin-top: 0px;
-  margin-bottom: 60px;
+.swiper .swiper-slide {
+  overflow: hidden;
+  text-align: center;
 }
 
-.swiper-container img {
-  height: 480px;
-}
-
-.swiper-container p {
-  position: absolute;
-  right: 0;
-  bottom: 100px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-}
-
-.swiper-container img {
-  box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+.swiper .swiper-slide img {
+  box-shadow: -20px -20px 10px 0px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
   -khtml-box-shadow: -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
-img.shadow0 {
-  -webkit-box-shadow: 0px 0px 0px 0px white;
-          box-shadow: 0px 0px 0px 0px white;
-}
-
-.swiper-container.swiper02 {
-  height: 550px;
-  padding: 20px 10px;
-}
-
-.swiper-container.swiper02 img {
-  width: auto;
-}
-
-.swiper-container.swiperPicasso img {
-  height: auto;
-}
-
-.swiper-slide {
+.swiper-container {
+  overflow: hidden;
+  position: relative;
   text-align: center;
-  font-size: 18px;
-  background-color: transparent;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.swiperTS3 .swiper-slide {
-  height: 600px;
-}
-
-/*----pagenation-----*/
-.swiper-pagination-bullet {
-  width: 40px;
-  height: 4px;
-  display: inline-block;
-  border-radius: 0px;
-  background: #000;
-  opacity: 0.2;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: var(--swiper-pagination-color, var(--swiper-theme-color));
-}
-
-/*---slider2-----*/
-.swiper02, .swiper03 {
-  width: 100%;
-  height: 100%;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -628,17 +631,81 @@ img.shadow0 {
   padding: 0;
 }
 
-.erp .erpSwiper02 img, .erp .erpSwiper03 img {
+.swiper-button-next, .swiper-button-prev {
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+.erp .erpHero .swiper-slide img, .VMware .erpHero .swiper-slide img {
+  box-shadow: none;
+}
+
+.erp img {
+  width: 100%;
+}
+
+.erp .erpHero .swiper-slide {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.erp .erpHero .swiper-slide img {
+  width: 80%;
+}
+
+.erp .erpHero .swiper-slide p {
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+}
+
+.erp .erpSwiper02, .erp .erpSwiper03 {
+  position: relative;
+}
+
+.erp .erpSwiper02 .swiper-slide, .erp .erpSwiper03 .swiper-slide {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  height: auto;
+}
+
+.erp .erpSwiper02 .swiper-slide img, .erp .erpSwiper03 .swiper-slide img {
+  width: 70%;
   margin-bottom: 20px;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+.erp .erpSwiper02 .swiper-slide p, .erp .erpSwiper03 .swiper-slide p {
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+  display: inline-block;
+  text-align: right;
+}
+
+.erp .erpSwiper02 {
+  height: 500px;
+  overflow: hidden;
+}
+
+.erp .erpSwiper02 .swiper-pagination02 {
+  position: absolute;
+  text-align: center;
+  transition: .5s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
 }
 
 .erp .erpSwiper03 .swiper-pagination {
   display: none;
-}
-
-.erp .erpSwiper01 p, .erp .erpSwiper02 p {
-  display: inline-block;
-  text-align: right;
 }
 
 /*----slider3-----*/
@@ -661,6 +728,72 @@ img.shadow0 {
   height: auto;
 }
 
+.fluDetailSwiper {
+  width: 100%;
+  height: 70vh;
+}
+
+.fluDetailSwiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fluDetailSwiper .swiper-slide img {
+  display: block;
+  width: 70%;
+}
+
+.swiper-pagination-bullet {
+  width: 30px;
+  height: 3px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  opacity: .5;
+  background-color: #04CBC3;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet.active {
+  opacity: 1;
+}
+
+:root {
+  --swiper-theme-color: #01A3B6;
+  --swiper-navigation-color: #04CBC3;
+}
+
+.inq .swiper-container .swiper-slide img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.inq .swiper-container .swiper-slide img.bigimage {
+  width: 90%;
+}
+
+.inq .row {
+  align-items: center;
+}
+
+.inq .inqDesktop, .inq .inqMobile {
+  position: relative;
+}
+
+.inq .inqDesktop .swiper-slide img {
+  width: 50%;
+}
+
+.picasso .demo img, .goodStudio .demo img {
+  width: 100%;
+}
+
 @media (max-width: 575px) {
   body {
     position: relative;
@@ -672,8 +805,7 @@ img.shadow0 {
     height: auto;
   }
   header::before {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   header::after {
     background: transparent;
@@ -716,8 +848,7 @@ img.shadow0 {
   }
   .nav .checkbox_toggle:checked + div span {
     opacity: 1;
-    -webkit-transform-origin: 8px 2px;
-            transform-origin: 8px 2px;
+    transform-origin: 8px 2px;
     background: #333333;
   }
   .nav .checkbox_toggle:checked ~ .navbar-nav {
@@ -727,19 +858,10 @@ img.shadow0 {
     left: -25vw;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .nav .checkbox_toggle:checked ~ .navbar-nav li {
     display: inline-block;
@@ -753,12 +875,10 @@ img.shadow0 {
     opacity: 1;
   }
   .nav .checkbox_toggle:checked + div span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   .nav .checkbox_toggle:checked + div span:nth-child(2) {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   .heroMe {
     top: 0;
@@ -784,9 +904,7 @@ img.shadow0 {
     margin-bottom: 8px;
     background: #333333;
     border-radius: 50px;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transition: .5s ease-in-out;
+    transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
     z-index: 555;
@@ -795,18 +913,14 @@ img.shadow0 {
     background-color: #fff;
     width: 100px;
     height: 100px;
-    -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
     border-bottom-right-radius: 100%;
     position: absolute;
     top: -10px;
     left: -17px;
-    -webkit-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
-    -webkit-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
     list-style-type: none;
-    -webkit-transition: .8s ease-out;
     transition: .8s ease-out;
     z-index: 0;
   }
@@ -817,7 +931,6 @@ img.shadow0 {
   }
   .nav a {
     opacity: 0;
-    -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
   }
   .container {
@@ -829,26 +942,18 @@ img.shadow0 {
   }
   .contact .emailinfo {
     padding: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact .emailme, .contact .msg {
     width: 100%;
   }
   .uiHeader {
     width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .uiHeader > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     width: 100%;
   }
   .uiContainer h3 {
@@ -864,8 +969,7 @@ img.shadow0 {
     width: 100%;
   }
   .VMware .demo {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .swiper-pagination-bullet {
     width: 4px;

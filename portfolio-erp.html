@@ -8,14 +8,14 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="favicon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
+    <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css"><!--font-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/portfolio.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/tabs.js" defer></script>
 </head>
 
@@ -29,7 +29,7 @@
         <li data-tab-target="#Graphic" class="tab"><a href="portfolio-visual">Visual</a></li>
     </ul>
     <div class="container tabContainer">
-        <div id="UI" data-tab-content class="uiContainer erp active ">
+        <div id="UI" class="uiContainer erp active ">
             <!-- Swiper -->
             <div class="uiHeader">
                 <h3>ERP App<span>UI + UX</span></h3>
@@ -38,31 +38,31 @@
                     <a href="portfolio-web" class="next" >Next Project</a>
                 </div>   
             </div>
-            <div class="swiper-container erpHero">
-                <div class="swiper-wrapper erpSwiper01">
+            <div style="--swiper-navigation-color: #01A3B6; --swiper-pagination-color: #01A3B6" class="swiper swiper-container erpHero">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="shadow0 wAuto" src="img/erp/Artboard-1.png" alt="">
+                        <img src="img/erp/Artboard-1.png" alt="">
                         <p><strong>Clock on</strong><br>使用藍芽便利員工上下班打卡<br>用顏色區分上班/加班</p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="shadow0 wAuto" src="img/erp/Artboard-2.png" alt="">
+                        <img src="img/erp/Artboard-2.png" alt="">
                         <p><strong>Calendar</strong><br>可用iOS & Android套件<br>將樣式重新設計即可</p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="shadow0 wAuto" src="img/erp/Artboard-3.png" alt="">
+                        <img src="img/erp/Artboard-3.png" alt="">
                         <p><strong>Management</strong><br>管理者頁面內容多以表單方式呈現<br>加入圖像修飾讓視覺不疲乏</p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="shadow0 wAuto" src="img/erp/Artboard-4.png" alt="">
+                        <img src="img/erp/Artboard-4.png" alt="">
                         <p><strong>Deputy</strong><br>代理人header顏色不同有區分<br>並強調等待簽核的表單</p>
                     </div>
                     <div class="swiper-slide">
-                        <img class="shadow0 wAuto" src="img/erp/Artboard-5.png" alt="">
+                        <img src="img/erp/Artboard-5.png" alt="">
                         <p><strong>Chart View + Draft</strong><br>管理者須看到每月出勤情況<br>並連結到組員的個人資料頁面</p>
                     </div>
                 </div>
                 <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination swiper-pagination01"></div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -87,7 +87,7 @@
                             </span>
                         </p>
                         <div class="demo col-xl-6 col-12">
-                            <img src="img/erp/ERP Screen 1.jpg" alt="">
+                            <img src="img/erp/ERP_Screen_1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                         <div class="swiper-container erpSwiper02">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="img/erp/Font Style.png" alt="" class="wAuto">
+                                    <img src="img/erp/Font_Style.png" alt="" class="w60">
                                     <p>因應不同裝置，採用Noto Sans CJK(Web)<br>Roboto(Android)，San Francisco(iOS)為預設字型</p>
                                 </div>
                                 <div class="swiper-slide">
@@ -114,19 +114,19 @@
                                     <p>漸層背景需避免文字不清<br>白色字體+圖像能加強識別度，避免誤按<br>以顏色區分上班打卡，加班打卡<br>以及各種表單申請</p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/erp/Layout1.png" alt="" class="wAuto">
+                                    <img src="img/erp/Layout1.png" alt="" class="w70">
                                     <p>因應裝置不同<br>標示元件尺寸百分比比例，間距設定</p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/erp/Layout2.png" alt="" class="wAuto">
+                                    <img src="img/erp/Layout2.png" alt="" >
                                     <p>設定下彈窗，公告<br>錯誤訊息通知<br>以及表單的規格</p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/erp/Tab-Label.png" alt="" class="wAuto">
+                                    <img src="img/erp/Tab-Label.png" alt="" class="w50">
                                     <p>設定標籤樣式跟卡片<br>樣式，陰影，透明度</p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="img/erp/Shadow.png" alt="" class="wAuto">
+                                    <img src="img/erp/Shadow.png" alt="" class="w50">
                                     <p>設定不同元件的陰影高度及深淺</p>
                                 </div>
                             </div>
@@ -197,13 +197,13 @@
     <script>
     /*<!-- Initialize Swiper 01-->*/
         var erpHero = new Swiper('.erpHero', {
-            // slidesPerView: 1,
+            slidesPerView: 1,
             centeredSlides: true,
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            // },
-            // spaceBetween: 0,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            spaceBetween: 0,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -225,8 +225,8 @@
         });
         /*<!-- Initialize Swiper 02-->*/
         var erpSwiper02 = new Swiper('.erpSwiper02', {
-            // slidesPerView: 1,
-            // spaceBetween: 100,
+            slidesPerView: 1,
+            spaceBetween: 100,
             centeredSlides: true,
             // autoplay: {
             //     delay: 4000,
@@ -285,10 +285,17 @@
     <script>
         w3.includeHTML();
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

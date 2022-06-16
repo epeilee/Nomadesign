@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio-aft</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="favicon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/portfolio.css">
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/tabs.js" defer></script>
+    <style type="text/css">
+        .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Slider main container -->
+    <div style="--swiper-navigation-color: #01A3B6; --swiper-pagination-color: #01A3B6" class="swiper testSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="/img/flu/influenzas fast testing-flowchart.png"  alt="...">
+                    <div class="carousel-caption d-flex justify-content-end px-4 mb-4">
+                        <p class="d-block text-left"><strong>User Story + Flow Chart</strong><br>專為醫療專業人員設計流感檢測App<br>
+                            可拍照流感試紙，檢測結果<br>儲存資料，查詢資料四種使用者行為<br>再規劃使用步驟</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="/img/flu/influenzas fast testing-uiflow.png"  alt="...">
+                    <div class="carousel-caption d-flex justify-content-end px-4 mb-4">
+                        <p class="d-block text-left"><strong>UI Flow</strong><br>流程須用最少的步驟<br>達到最快速的效果</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="/img/flu/influenzas_fast_testing-1.png" alt="...">
+                    <div class="carousel-caption d-flex justify-content-end px-4 mb-4">
+                        <p class="d-block text-left"><strong>Test pages</strong><br>介面單純乾淨<br>視覺重點在檢測結果及<br>下一步行爲的按鈕</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="/img/flu/influenzas_fast_testing-2.png" alt="...">
+                    <div class="carousel-caption d-flex justify-content-end px-4 mb-4">
+                        <p class="d-block text-left"><strong>Result pages</strong><br>結果頁告知流感類型及注意事項<br>可編輯個人資料並儲存為資料庫</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="/img/flu/influenzas_fast_testing-3.png" alt="...">
+                    <div class="carousel-caption d-flex justify-content-end px-4 mb-4">
+                        <p class="d-block text-left"><strong>Industration</strong><br>解答醫護人員使用上的問題<br>線上通報方式，基本的危機處理</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="/img/flu/influenzas fast testing-4.png"  alt="...">
+                    <div class="carousel-caption d-flex justify-content-start px-4 mb-4">    
+                        <p class="d-block text-left"><strong>User guide</strong><br>插畫強調拍照試紙<br>三秒後即可得到檢測結果</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".testSwiper", {
+          spaceBetween: 0,
+          centeredSlides: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+
+</body>
+
+</html>

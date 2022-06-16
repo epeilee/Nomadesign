@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://use.typekit.net/aax1kgm.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/portfolio.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/tabs.js" defer></script>
     
     
@@ -31,7 +31,7 @@
         <li data-tab-target="#Graphic" class="tab"><a href="portfolio-visual">Visual</a></li>
     </ul>
     <div class="container tabContainer">
-        <div id="Web" data-tab-content class="uiContainer inq active">
+        <div id="Web" class="uiContainer inq active">
             <div class="uiHeader">
                 <h3>Company Website<span>Web</span></h3>
                 <div>
@@ -40,15 +40,13 @@
                 </div>   
             </div>
             <div class="container even">
-                <div class="row summary w80">
-                    <img src="img/inq/Main File.png" alt="">
-                </div>
+                <img src="img/inq/mainfile.png" alt="">
             </div>
             <div class="Content">
                 <div class="container">
                     <h3>About this Project</h3>
-                    <div class="row summary">
-                        <div class=" col-xl-4 col-12">
+                    <div class="row">
+                        <div class="col-xl-4 col-12">
                             <ul class="ch">
                                 <li>
                                     <p><strong>設計風格</strong></p>
@@ -66,14 +64,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="demo col-xl-8 col-12">
-                            <div class="swiper-container swiperInq w100">
-                                <div class="swiper-wrapper w100">
+                        <div class="col-xl-8 col-12">
+                            <div class="swiper-container swiperInq1">
+                                <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img class="shadow0 h600" src="img/inq/InQuark-D.png" alt="">
+                                        <img class="bigimage" src="img/inq/InQuark-D.png" alt="">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img class="shadow0 h600" src="img/inq/InQuark-M.png" alt="">
+                                        <img src="img/inq/InQuark-M.png" alt="">
                                     </div>
                                 </div>
                                 <!-- Add Pagination -->
@@ -89,13 +87,13 @@
                     <h3>Desktop</h3>
                     <div class="details">
                         <!-- Swiper -->
-                        <div class="swiper-container swiperInq2">
+                        <div class="swiper-container inqDesktop">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img class="w40 hAuto" src="img/inq/page-1-homepage.png" alt=""></div>
-                                <div class="swiper-slide"><img class="w40 hAuto" src="img/inq/170531-redesign-v2-Home.jpg" alt=""></div>
-                                <div class="swiper-slide"><img class="w40 hAuto" src="img/inq/170531-redesign-v2-WhatWeDo.jpg" alt=""></div>
-                                <div class="swiper-slide"><img class="w40 hAuto" src="img/inq/170531-redesign-v2-ContactUs.jpg" alt=""></div>
-                                <div class="swiper-slide"><img class="w40 hAuto" src="img/inq/170531-redesign-v2-Careers.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/inq/page-1-homepage.png" alt=""></div>
+                                <div class="swiper-slide"><img src="img/inq/170531-redesign-v2-Home.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/inq/170531-redesign-v2-WhatWeDo.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/inq/170531-redesign-v2-ContactUs.jpg" alt=""></div>
+                                <div class="swiper-slide"><img src="img/inq/170531-redesign-v2-Careers.jpg" alt=""></div>
                             </div>
                             <!-- Add Pagination -->
                             <div class="swiper-pagination"></div>
@@ -108,7 +106,7 @@
                 <div class="container">
                     <h3>Mobile</h3>
                     <div class="details">
-                        <div class="swiper-container swiperInq3">
+                        <div class="swiper-container inqMobile">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img class="w15 hAuto" src="img/inq/page-1-m-home.png" alt=""></div>
                                 <div class="swiper-slide"><img class="w20 hAuto" src="img/inq/page-1-m-nav.png" alt=""></div>
@@ -130,7 +128,7 @@
 
     <script>
         /*<!-- Initialize Swiper 01-->*/
-        var swiper = new Swiper('.swiper-container.swiperInq', {
+        var swiper = new Swiper('.swiper-container.swiperInq1', {
             // slidesPerView: 1,
             centeredSlides: true,
             // spaceBetween: 0,
@@ -159,7 +157,7 @@
             }
         });
         // <!-- /*Initialize swiperInq*/ -->
-        var swiper = new Swiper('.swiper-container.swiperInq2', {
+        var swiper = new Swiper('.swiper-container.inqDesktop', {
             // autoHeight: true, //enable auto height
             // slidesPerView: 1,
             // spaceBetween: 0,
@@ -189,7 +187,7 @@
             }
         });
         // <!-- /*Initialize swiperInq*/ -->
-        var swiper = new Swiper('.swiper-container.swiperInq3', {
+        var swiper = new Swiper('.swiper-container.inqMobile', {
             autoHeight: true, //enable auto height
             // slidesPerView: 2,
             spaceBetween: 0,
@@ -223,9 +221,17 @@
     <script>
         w3.includeHTML();
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
 
 </body>
 

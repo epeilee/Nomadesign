@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="css/portfolio.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/tabs.js" defer></script>
     
 </head>
@@ -30,7 +29,7 @@
         <li data-tab-target="#Graphic" class="tab"><a href="portfolio-visual">Visual</a></li>
     </ul>
     <div class="container tabContainer">
-        <div id="Web" data-tab-content class="uiContainer aft active">
+        <div id="Web" class="uiContainer aft active">
             <div class="uiHeader">
                 <h3>Afusion official website Webpages<span>Web</span></h3>
                 <div>
@@ -38,52 +37,54 @@
                     <a href="portfolio-TS" class="next" >Next Project</a>
                 </div>
             </div>
-            <div class="row summary">
-                <div class="aftHero">
-                    <!-- Swiper -->
-                    <div class="swiper-container swiperAft">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img class="w70 hAuto" src="img/aft/AFT_Website_Redesign_About.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="w70 hAuto" src="img/aft/AFT_Website_Redesign_Contact.jpg" alt=""></div>
-                            <div class="swiper-slide"><img class="w70 hAuto" src="img/aft/AFT_Website_Redesign_Join_1.jpg" alt=""></div>
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+            <!-- Swiper -->
+            <div class="swiper swiper-container aftHero">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/aft/AFT_Website_Redesign_About.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/aft/AFT_Website_Redesign_Contact.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/aft/AFT_Website_Redesign_Join_1.jpg" alt="">
                     </div>
                 </div>
-                <div class="details">
-                    <li>
-                        <p><strong>設計風格</strong></p>
-                        <div>
-                            <p>表現清爽明亮呈現開放的辦公環境，以及美式活潑的工作模式，公司花絮照片由負責的企劃及設計師規劃並拍攝，約有三到四位設計負責每個單元頁面設計。</p>
-                        </div>
-                    </li>
-                    <li>
-                        <p><strong>主色彩</strong></p>
-                        <div>
-                            <p class="color aftBlue">#14cdd9&emsp;AFT Blue</p>
-                            <p class="color aftBlack">#131522&emsp;AFT Black</p>
-                            
-                        </div>
-                    </li>
-                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="details">
+                <li>
+                    <p><strong>設計風格</strong></p>
+                    <div>
+                        <p>表現清爽明亮呈現開放的辦公環境，以及美式活潑的工作模式，公司花絮照片由負責的企劃及設計師規劃並拍攝，約有三到四位設計負責每個單元頁面設計。</p>
+                    </div>
+                </li>
+                <li>
+                    <p><strong>主色彩</strong></p>
+                    <div>
+                        <p class="color aftBlue">#14cdd9&emsp;AFT Blue</p>
+                        <p class="color aftBlack">#131522&emsp;AFT Black</p>
+                        
+                    </div>
+                </li>
             </div>
         </div>
     </div>
 
     <script>
         /*<!-- Initialize Swiper 01-->*/
-        var swiper = new Swiper('.swiper-container.swiperAft', {
-            // slidesPerView: 1,
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
             centeredSlides: true,
-            // spaceBetween: 0,
-            // autoplay: {
-            //     delay: 4000,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            spaceBetween: 0,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -108,9 +109,16 @@
     <script>
         w3.includeHTML();
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <!-- Swiper JS -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
 
 </body>
 

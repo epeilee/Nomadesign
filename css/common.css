@@ -12,8 +12,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body, html {
@@ -96,15 +95,13 @@ header::after {
 header::before {
   top: 64px;
   /* shadow is at bottom of element, so at 48 + 16 = 64px */
-  -webkit-box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* COVER */
 header::after {
   /* linear gradient from background color to transparent acts as
      a transition effect so the shadow appears gradually */
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(20%, #fafafa), color-stop(20%, #f1f2f3), color-stop(5%, #f1f2f3), to(transparent));
   background: linear-gradient(180deg, #fff, #fafafa 20%, #f1f2f3 20%, #f1f2f3 5%, transparent);
   position: relative;
   top: -10px;
@@ -113,13 +110,8 @@ header::after {
 }
 
 .nav {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   height: 88px;
   width: 100%;
   top: 0px;
@@ -141,16 +133,9 @@ header::after {
 }
 
 .nav .navbar-nav {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
 }
 
@@ -192,7 +177,6 @@ header::after {
   top: -10px;
   right: -12px;
   font-size: 20px;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -201,7 +185,6 @@ header::after {
 }
 
 a {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-decoration: none;
   color: #333333;
@@ -220,19 +203,16 @@ a:hover, a:active, a:focus {
   cursor: pointer;
   padding: 10px 40px;
   border: 0px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
   background-color: #666666;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: #fafafa;
 }
 
@@ -248,8 +228,7 @@ a:hover, a:active, a:focus {
 
 .btn:focus {
   background-color: #666666;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: #fafafa;
 }
 
@@ -285,26 +264,15 @@ a:hover, a:active, a:focus {
 }
 
 .contact .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   max-width: 1200px;
 }
 
 .contact .emailinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   padding: 0 10%;
 }
 
@@ -322,13 +290,8 @@ a:hover, a:active, a:focus {
 }
 
 .contact .msg div {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
   padding: 15px 0;
 }
@@ -343,7 +306,6 @@ a:hover, a:active, a:focus {
   border: 1px solid #999999;
   background-color: #FAFAFA;
   padding: 10px;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -359,15 +321,13 @@ a:hover, a:active, a:focus {
 .contact .msg input:focus, .contact .msg textarea:focus {
   outline: 2px solid #04CBC3;
   border-color: transparent;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: transparent;
 }
 
 .contact .msg input[type=submit] {
   color: #fafafa;
   background-color: #333333;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
