@@ -34,6 +34,17 @@
   margin: 0 auto;
 }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container h3 {
+  text-align: center;
+  color: #333333;
+  padding: 20px 0 60px 0;
+}
+
 .project {
   background-color: #333333;
   padding-top: 60px;
@@ -121,7 +132,7 @@
   width: 100%;
 }
 
-h3 {
+.project h3 {
   text-align: left;
   position: relative;
   margin-top: 50px;
@@ -130,8 +141,8 @@ h3 {
   position: relative;
 }
 
-h3::before,
-h3::after {
+.project h3::before,
+.project h3::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -140,11 +151,11 @@ h3::after {
   height: 1px;
 }
 
-h3::before {
+.project h3::before {
   left: -9%;
 }
 
-h3::after {
+.project h3::after {
   width: 30%;
 }
 

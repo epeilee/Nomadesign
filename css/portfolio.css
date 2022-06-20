@@ -1,3 +1,232 @@
+.hero .name {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero .personLogo, .hero .personName {
+  text-align: center;
+}
+
+.hero .personName {
+  color: #555;
+}
+
+.hero img {
+  width: 330px;
+  text-align: center;
+}
+
+.hero .personDiscription {
+  text-align: center;
+}
+
+.hero .personDiscription span {
+  color: #04CBC3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container h3 {
+  text-align: center;
+  color: #333333;
+  padding: 20px 0 60px 0;
+  color: #fff;
+}
+
+.project {
+  background-color: #333333;
+  padding-top: 60px;
+}
+
+.project .content .btnArea {
+  text-align: right;
+}
+
+.project h2 {
+  color: #fafafa;
+  text-align: center;
+}
+
+.project .designSection {
+  display: flex;
+  margin-bottom: 60px;
+  width: 100%;
+  max-width: 1200px;
+  position: static;
+}
+
+.project .designSection + .even {
+  flex-direction: row-reverse;
+  right: 5%;
+}
+
+.project .designSection + .even .projectImg .intrinsic {
+  left: 15%;
+}
+
+.project .projectCard {
+  background-color: #fafafa;
+  padding: 60px;
+  min-height: 400px;
+  height: 48vh;
+  z-index: 2;
+  position: relative;
+  top: 50px;
+  text-align: left;
+}
+
+.project h4, .project .subheader, .project p {
+  padding-bottom: 20px;
+}
+
+.project .projectImg {
+  position: relative;
+  left: -13%;
+}
+
+.project .projectImg .intrinsic {
+  width: 130%;
+  left: 0;
+  position: relative;
+}
+
+.project .projectImg .intrinsic img {
+  min-height: 100%;
+  width: 100%;
+  left: 0.0666267px;
+  top: 0px;
+  position: static;
+}
+
+.project .moreDesignSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 -15px;
+}
+
+.project .moreDesignSection a {
+  display: block;
+  font-size: 0;
+}
+
+.project .moreDesignSection .col-xl-4 {
+  margin-bottom: 30px;
+}
+
+.project .moreDesignSection img {
+  width: 100%;
+}
+
+.project h3 {
+  text-align: left;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  margin-left: 8%;
+  position: relative;
+}
+
+.project h3::before,
+.project h3::after {
+  content: '';
+  position: absolute;
+  top: 36%;
+  background: #04CBC3;
+  width: 10%;
+  height: 1px;
+}
+
+.project h3::before {
+  left: -12%;
+}
+
+.project h3::after {
+  width: 30%;
+  left: 20%;
+}
+
+.col-p15 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (max-width: 575px) {
+  .hero img {
+    width: 80%;
+  }
+  .hero .personDiscription {
+    font-size: 30px;
+    text-align: center;
+  }
+  .container h3::after {
+    position: absolute;
+    left: 184px;
+  }
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .web h3::after {
+    left: 213px;
+  }
+  .visual h3::after {
+    width: 27%;
+    left: 232px;
+  }
+  .project .designSection {
+    position: static;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .project .projectCard, .project .projectImg {
+    max-width: 100%;
+    flex: 0 0 100%;
+    position: static;
+  }
+  .project .projectCard {
+    top: 0px;
+    padding: 40px 5%;
+  }
+  .project .projectImg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .project .projectImg .intrinsic {
+    width: 100%;
+    font-size: 0;
+  }
+  .project .designSection + .even {
+    flex-direction: column-reverse;
+    right: 0;
+  }
+  .project .designSection + .even .projectImg .intrinsic {
+    left: 0;
+  }
+  .project .moreDesignSection {
+    margin: 0;
+  }
+  .project .moreDesignSection .col-6 {
+    padding: 0 1%;
+  }
+}
+
 [data-tab-content] {
   display: none;
 }
@@ -24,17 +253,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 60px 0 0 0;
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container h3 {
-  text-align: center;
-  color: #333333;
-  padding: 20px 0 60px 0;
 }
 
 .Content span {
@@ -313,7 +531,7 @@
 .aft .details {
   z-index: 2;
   position: fixed;
-  top: 50%;
+  bottom: 5%;
   right: 0;
   background-color: rgba(255, 255, 255, 0.9);
   width: 40%;
