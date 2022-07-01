@@ -974,6 +974,12 @@
         }
     }
 }
+
+.jobDescription{
+    font-weight: 100;
+}
+
+
 @media (max-width: 575px)  {
     body{
         position: relative;
@@ -1072,6 +1078,9 @@
         top: 0;
         // position: absolute;
     }
+    
+    
+    
     .nav{
         position: relative;
         padding: 20px;
