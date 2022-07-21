@@ -381,7 +381,7 @@
         -khtml-box-shadow:  -20px -20px 10px -20px white, -10px -10px 10px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
         margin-bottom: 100px;
     }
-    .swiperHero, .swiperGuideline, .swiperPages{
+    .Hero, .swiperGuideline, .swiperPages{
         position: relative;
         width: 100%;
         display: inline-block;
@@ -792,8 +792,8 @@
 .swiper-button-next, .swiper-button-prev {
     color: var(--swiper-navigation-color,var(--swiper-theme-color));
 }
-.erp,.VMware{
-    .erpHero{
+.erp,.VMware,.mutok{
+    .Hero{
         .swiper-slide{
             img{
                 box-shadow:none;
@@ -801,11 +801,11 @@
         }
     } 
 }
-.erp{
+.erp,.mutok{
     img{
         width: 100%;
     }
-    .erpHero{
+    .Hero{
         .swiper-slide{
             display: inline-block;
             text-align: center;
@@ -825,7 +825,7 @@
         }
     }
 
-    .erpSwiper02,.erpSwiper03{
+    .erpSwiper02,.erpSwiper03,.mutokSwiper02,.mutokSwiper03{
         position: relative;
         .swiper-slide{
             display: inline-block;
@@ -851,7 +851,7 @@
             }
         }
     }
-    .erpSwiper02{
+    .erpSwiper02,.mutokSwiper02{
         height: 500px;
         overflow: hidden;
         .swiper-pagination02{
@@ -862,7 +862,7 @@
             z-index: 10;
         }
     }
-    .erpSwiper03{
+    .erpSwiper03,.mutokSwiper03{
         .swiper-pagination{
             display: none;
         }
@@ -1189,5 +1189,17 @@
         height: 4px;
         border-radius: 4px;
     }
+}
+.mutok{
+    .container{
+        h3{
+            position: relative;
+        }
+        span{
+            position: absolute;
+            right: 0;
+        }
+    }
+    
 }
 
