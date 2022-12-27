@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAEA,AAAA,OAAO,CAAA;EACH,WAAW,EAAE,IAAI;EACjB,aAAa,EAAE,CAAC;EAChB,YAAY,EAAE,CAAC;CAYlB;;AAfD,AAII,OAJG,CAIH,QAAQ,CAAA;EACJ,MAAM,EAAE,MAAM;CACjB;;AANL,AAOI,OAPG,CAOH,GAAG,CAAA;EACC,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,MAAM;EACjB,UAAU,EAAG,IAAG,CAAE,IAAG,CAAC,IAAI,CAAC,GAAG,CAAC,KAAmB,EAAE,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC,CAAC,kBAAc;CACpF;;AAXL,AAYI,OAZG,CAYH,QAAQ,CAAC;EACL,gBAAgB,EAAE,OAAO;CAC5B",
-    "sources": [
-        "../sass/resume.scss",
-        "../sass/_variable.scss"
-    ],
-    "names": [],
-    "file": "resume.css"
-}
+{"version":3,"sourceRoot":"","sources":["../sass/resume.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;;AACA;EACI;;AAEJ;EACI;EACA;EACA;;AAEJ;EACI","file":"resume.css"}

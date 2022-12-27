@@ -4,24 +4,19 @@
   justify-content: center;
   width: 100%;
 }
-
 .hero .personLogo, .hero .personName {
   text-align: center;
 }
-
 .hero .personName {
   color: #555;
 }
-
 .hero img {
   width: 330px;
   text-align: center;
 }
-
 .hero .personDiscription {
   text-align: center;
 }
-
 .hero .personDiscription span {
   color: #04CBC3;
 }
@@ -38,7 +33,6 @@
   width: 100%;
   margin: 0 auto;
 }
-
 .container h3 {
   text-align: center;
   color: #333333;
@@ -49,16 +43,13 @@
   background-color: #333333;
   padding-top: 60px;
 }
-
 .project .content .btnArea {
   text-align: right;
 }
-
 .project h2 {
   color: #fafafa;
   text-align: center;
 }
-
 .project .designSection {
   display: flex;
   margin-bottom: 60px;
@@ -66,16 +57,13 @@
   max-width: 1200px;
   position: static;
 }
-
 .project .designSection + .even {
   flex-direction: row-reverse;
   right: 5%;
 }
-
 .project .designSection + .even .projectImg .intrinsic {
   left: 15%;
 }
-
 .project .projectCard {
   background-color: #fafafa;
   padding: 60px;
@@ -86,22 +74,18 @@
   top: 50px;
   text-align: left;
 }
-
 .project h4, .project .subheader, .project p {
   padding-bottom: 20px;
 }
-
 .project .projectImg {
   position: relative;
   left: -13%;
 }
-
 .project .projectImg .intrinsic {
   width: 130%;
   left: 0;
   position: relative;
 }
-
 .project .projectImg .intrinsic img {
   min-height: 100%;
   width: 100%;
@@ -109,7 +93,6 @@
   top: 0px;
   position: static;
 }
-
 .project .moreDesignSection {
   display: flex;
   flex-wrap: wrap;
@@ -118,20 +101,16 @@
   align-items: center;
   margin: 0 -15px;
 }
-
 .project .moreDesignSection a {
   display: block;
   font-size: 0;
 }
-
 .project .moreDesignSection .col-xl-4 {
   margin-bottom: 30px;
 }
-
 .project .moreDesignSection img {
   width: 100%;
 }
-
 .project h3 {
   text-align: left;
   position: relative;
@@ -140,21 +119,18 @@
   margin-left: 8%;
   position: relative;
 }
-
 .project h3::before,
 .project h3::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   background: #04CBC3;
   width: 10%;
   height: 1px;
 }
-
 .project h3::before {
   left: -9%;
 }
-
 .project h3::after {
   width: 30%;
 }
@@ -223,5 +199,4 @@
   .project .moreDesignSection .col-6 {
     padding: 0 1%;
   }
-}
-/*# sourceMappingURL=nomadrachel.css.map */
+}/*# sourceMappingURL=nomadrachel.css.map */

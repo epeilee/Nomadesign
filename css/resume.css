@@ -3,18 +3,14 @@
   padding-right: 0;
   padding-left: 0;
 }
-
 .resume .contain {
   margin: 0 auto;
 }
-
 .resume img {
   width: 100vw;
   max-width: 1200px;
-  box-shadow: -4px -4px 20px 0px white, 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: -4px -4px 20px 0px rgb(255, 255, 255), 4px 4px 25px 0 rgba(0, 0, 0, 0.1);
 }
-
 .resume .contact {
   background-color: #fafafa;
-}
-/*# sourceMappingURL=resume.css.map */
+}/*# sourceMappingURL=resume.css.map */

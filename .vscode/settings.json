@@ -13,7 +13,7 @@
         
     ],
     "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
     "liveServer.settings.useWebExt": true,
     "liveServer.settings.donotShowInfoMsg": true,

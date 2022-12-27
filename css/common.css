@@ -1,14 +1,13 @@
+@charset "UTF-8";
 @font-face {
   font-family: orpheus-pro;
   src: url(../fonts/Orpheus-Regular.ttf);
 }
-
 @font-face {
   font-family: orpheus-pro;
   src: url(../fonts/OrpheusPro-Bold.ttf);
   font-weight: bold;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +45,7 @@ h4 {
 
 p {
   font-size: 18px;
-  font-family: 'open Sans regular', Noto Sans SC;
+  font-family: "open Sans regular", Noto Sans SC;
   color: #666666;
   font-weight: 300;
   line-height: 2;
@@ -85,7 +84,7 @@ header {
 /* PSEUDO ELEMENTS to create drop-shadow */
 header::before,
 header::after {
-  content: '';
+  content: "";
   display: block;
   height: 24px;
   /* make pseudo elements sticky as well */
@@ -93,15 +92,14 @@ header::after {
 
 /* SHADOW */
 header::before {
-  top: 64px;
-  /* shadow is at bottom of element, so at 48 + 16 = 64px */
+  top: 64px; /* shadow is at bottom of element, so at 48 + 16 = 64px */
   box-shadow: 4px 4px 40px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* COVER */
 header::after {
   /* linear gradient from background color to transparent acts as
-     a transition effect so the shadow appears gradually */
+   a transition effect so the shadow appears gradually */
   background: linear-gradient(180deg, #fff, #fafafa 20%, #f1f2f3 20%, #f1f2f3 5%, transparent);
   position: relative;
   top: -10px;
@@ -123,54 +121,45 @@ header::after {
   z-index: 2;
   z-index: 6;
 }
-
 .nav .checkbox_toggle {
   display: none;
 }
-
 .nav .hamburgerMenu {
   display: none;
 }
-
 .nav .navbar-nav {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
-
 .nav li {
   margin: 10px 30px;
   cursor: pointer;
 }
-
 .nav li::before {
-  content: '\03A7';
+  content: "Χ";
   padding-right: 60px;
   color: #04CBC3;
-  font-family: 'open Sans', Noto Sans SC;
+  font-family: "open Sans", Noto Sans SC;
   font-weight: 100;
   font-size: 22px;
 }
-
 .nav li:nth-child(1)::before {
-  content: '';
+  content: "";
   padding-right: 0;
 }
-
 .nav li::after :hover, .nav li::after :active, .nav li::after :focus {
-  content: '';
+  content: "";
   width: 5px;
   border-radius: 50%;
   color: #04CBC3;
 }
-
 .nav a {
   font-size: 40px;
 }
-
 .nav a::after {
-  content: "\2022";
+  content: "•";
   display: none;
   color: #04CBC3;
   position: absolute;
@@ -179,7 +168,6 @@ header::after {
   font-size: 20px;
   transition: all 0.2s;
 }
-
 .nav a:hover::after, .nav a:active::after, .nav a:focus::after {
   display: inline-block;
 }
@@ -236,18 +224,15 @@ a:hover, a:active, a:focus {
   cursor: pointer;
   padding: 10px 40px;
 }
-
 .tab a {
   text-decoration: none;
   font-size: 30px;
   color: #666666;
 }
-
 .tab a:hover {
   border-bottom: 1px solid #04CBC3;
   color: #04CBC3;
 }
-
 .tab a:active, .tab a:focus {
   color: #04CBC3;
 }
@@ -262,80 +247,66 @@ a:hover, a:active, a:focus {
   color: #333333;
   text-align: center;
 }
-
 .contact .content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 1200px;
 }
-
 .contact .emailinfo {
   display: flex;
   flex-direction: row;
   padding: 0 10%;
 }
-
 .contact .emailinfo h4 {
   padding-bottom: 40px;
   text-align: left;
 }
-
 .contact .emailinfo p {
   text-align: left;
 }
-
 .contact .emailme, .contact .msg {
   width: 50%;
 }
-
 .contact .msg div {
   display: inline-flex;
   flex-direction: column;
   width: 100%;
   padding: 15px 0;
 }
-
 .contact .msg label {
   padding-bottom: 0px;
   text-align: left;
 }
-
 .contact .msg input, .contact .msg textarea {
   border-radius: 0;
   border: 1px solid #999999;
   background-color: #FAFAFA;
   padding: 10px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .contact .msg input {
   height: 50px;
 }
-
 .contact .msg input[type=submit] {
   border-radius: 0px;
   cursor: pointer;
 }
-
 .contact .msg input:focus, .contact .msg textarea:focus {
   outline: 2px solid #04CBC3;
   border-color: transparent;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: transparent;
 }
-
 .contact .msg input[type=submit] {
   color: #fafafa;
   background-color: #333333;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 .contact .msg input[type=submit] {
   color: #fafafa;
   background-color: #333333;
 }
-
 .contact .msg input[type=submit]:hover {
   background-color: #555555;
   color: #fafafa;
@@ -366,5 +337,4 @@ a:hover, a:active, a:focus {
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
   padding-right: 0px;
   padding-left: 0px;
-}
-/*# sourceMappingURL=common.css.map */
+}/*# sourceMappingURL=common.css.map */
