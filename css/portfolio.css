@@ -297,6 +297,30 @@
   width: auto;
 }
 
+.syncFile .slide {
+  height: 650px;
+  overflow: hidden;
+}
+.syncFile .slide img {
+  height: auto;
+  width: 900px;
+  margin: 0 auto;
+}
+.syncFile .swiper-container .swiper-slide img {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+.syncFile .swiper-container .swiper-slide img.bigimage {
+  width: 90%;
+}
+.syncFile .demo {
+  display: flex;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
 .carousel-caption {
   background-color: rgba(216, 216, 216, 0.7);
   position: absolute;
@@ -313,7 +337,7 @@
 }
 
 .carousel img.carousel-control-prev-icon, .carousel img.carousel-control-next-icon {
-  width: 30%;
+  width: 60px;
   height: auto;
 }
 

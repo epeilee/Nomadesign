@@ -322,6 +322,38 @@
         }
     }
 }
+.syncFile{
+    .slide{
+        height: 650px;
+        overflow: hidden;
+        img{
+            height: auto;
+            width: 900px;
+            margin: 0 auto;
+        }
+    }
+    .swiper-container{
+        .swiper-slide{
+            // display: contents;
+            img{
+                width: 70%;
+                display: block;
+                margin: 0 auto;
+                // vertical-align: middle;
+            }
+            img.bigimage{
+                width: 90%;
+            }
+        }
+    }
+    .demo{
+        display: flex;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+
+}
 .carousel-caption{
     background-color: rgba(216, 216, 216, 0.7);
     position: absolute;
@@ -337,7 +369,7 @@
 }
 .carousel{
     img.carousel-control-prev-icon, img.carousel-control-next-icon {
-        width: 30%;
+        width: 60px;
         height: auto;
     }
 }
