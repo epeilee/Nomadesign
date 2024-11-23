@@ -8,7 +8,7 @@
   text-align: center;
 }
 .hero .personName {
-  color: #555;
+  color: #333333;
 }
 .hero img {
   width: 330px;
@@ -929,6 +929,10 @@
 
 .jobDescription {
   font-weight: 100;
+  font-family: "open Sans regular", Noto Sans SC;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  color: #666666;
 }
 
 @media (max-width: 575px) {

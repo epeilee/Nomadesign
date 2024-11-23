@@ -3,10 +3,10 @@
 .hero{
     .en{
         // padding-top: 40px;
-        color: #666666;
+        color: $font-pColor;
     }
     .ch{
-        color: #666666;
+        color: $font-pColor;
         font-size: 20px;
         padding-top: 40px;
         line-height: 2.4;
@@ -48,8 +48,12 @@
     .duty, .companyName, .position, .workyear{
         padding: 10px 5%;
     }
+    .companyName{
+        color: $font-headerColor;
+    }
     .workyear{
         min-width: 238px;
+        color: $font-headerColor;
     }
     
 }

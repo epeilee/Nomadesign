@@ -43,8 +43,12 @@
 .works .duty, .works .companyName, .works .position, .works .workyear {
   padding: 10px 5%;
 }
+.works .companyName {
+  color: #333333;
+}
 .works .workyear {
   min-width: 238px;
+  color: #333333;
 }
 
 .myexperience, .skills, .contact {

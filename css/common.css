@@ -1,12 +1,13 @@
 @charset "UTF-8";
 @font-face {
-  font-family: orpheus-pro;
+  font-family: "Orpheus-Regular";
   src: url(../fonts/Orpheus-Regular.ttf);
 }
 @font-face {
-  font-family: orpheus-pro;
+  font-family: "orpheus-pro";
   src: url(../fonts/OrpheusPro-Bold.ttf);
   font-weight: bold;
+  letter-spacing: 1.2px;
 }
 * {
   margin: 0;
@@ -15,32 +16,37 @@
 }
 
 body, html {
-  font-family: "orpheus-pro", "Lato", "Noto Sans TC", serif, sans-serif;
+  font-family: "Orpheus-Regular", "Lato", "Noto Sans TC", serif, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.7;
   width: 100%;
+  letter-spacing: 1.2px;
 }
 
 h1 {
   font-size: 60px;
   color: #333333;
+  letter-spacing: 1.2px;
 }
 
 h2 {
   font-size: 50px;
   color: #333333;
   padding-bottom: 40px;
+  letter-spacing: 1.2px;
 }
 
 h3 {
   font-size: 30px;
   color: #04CBC3;
+  letter-spacing: 1.2px;
 }
 
 h4 {
   font-size: 24px;
   color: #333333;
+  letter-spacing: 1.2px;
 }
 
 p {
@@ -49,6 +55,7 @@ p {
   color: #666666;
   font-weight: 300;
   line-height: 2;
+  letter-spacing: 1.4px;
 }
 
 b, strong {
@@ -144,6 +151,7 @@ header::after {
   font-family: "open Sans", Noto Sans SC;
   font-weight: 100;
   font-size: 22px;
+  letter-spacing: 1.4px;
 }
 .nav li:nth-child(1)::before {
   content: "";
@@ -157,6 +165,7 @@ header::after {
 }
 .nav a {
   font-size: 40px;
+  letter-spacing: 1.4px;
 }
 .nav a::after {
   content: "•";

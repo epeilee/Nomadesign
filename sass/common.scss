@@ -1,12 +1,13 @@
 @import"variable";
 @font-face {
-    font-family: orpheus-pro;
+    font-family: 'Orpheus-Regular';
     src: url(../fonts/Orpheus-Regular.ttf);
 }
 @font-face {
-    font-family: orpheus-pro;
+    font-family: 'orpheus-pro';
     src: url(../fonts/OrpheusPro-Bold.ttf);
     font-weight: bold;
+    letter-spacing: 1.2px;
 }
 
 *{
@@ -16,29 +17,34 @@
 }
 
 body, html{
-    font-family: "orpheus-pro", "Lato", "Noto Sans TC", serif, sans-serif;
+    font-family: "Orpheus-Regular", "Lato", "Noto Sans TC", serif, sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: $font-lineHeight;
     width: 100%;
+    letter-spacing: 1.2px;
 }
 
 h1{
     font-size: $font-H1Size;
     color: $font-headerColor;
+    letter-spacing: 1.2px;
 }
 h2{
     font-size: $font-H2Size;
     color: $font-headerColor;
     padding-bottom: 40px;
+    letter-spacing: 1.2px;
 }
 h3{
     font-size: $font-H3Size;
     color: $font-secondColor;
+    letter-spacing: 1.2px;
 }
 h4{
     font-size: $font-H4Size;
     color: $font-headerColor;
+    letter-spacing: 1.2px;
 }
 p{
     font-size: $font-pSize;
@@ -46,6 +52,7 @@ p{
     color: $font-pColor;
     font-weight: 300;
     line-height: 2;
+    letter-spacing: 1.4px;
 }
 b, strong {
     font-weight: bolder;
@@ -146,6 +153,7 @@ header::after {
         font-family: 'open Sans', Noto Sans SC;
         font-weight: 100;
         font-size: 22px;
+        letter-spacing: 1.4px;
     }
     li:nth-child(1)::before{
         content: '';
@@ -161,6 +169,7 @@ header::after {
     }
     a{
         font-size: 40px;
+        letter-spacing: 1.4px;
     }
     a::after{
         content: "\2022";

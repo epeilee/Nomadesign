@@ -11,7 +11,7 @@
         text-align: center;
     }
     .personName{
-        color: #555;
+        color: $font-headerColor;
     }
     img{
         width: 330px;
@@ -1013,6 +1013,10 @@
 
 .jobDescription{
     font-weight: 100;
+    font-family: 'open Sans regular', Noto Sans SC;
+    font-weight: 300;
+    letter-spacing: 1.4px;
+    color: $font-pColor;
 }
 
 
